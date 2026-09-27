@@ -632,7 +632,13 @@
     }
 
     .layer-master-row .check-label {
+      grid-template-columns: minmax(0, 1fr);
+      column-gap: 0;
       font-weight: 800;
+    }
+
+    .layer-master-row .layer-name {
+      white-space: nowrap;
     }
 
     .layer-master-row input {
