@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="uuid-e6a25953-01cb-4950-85a1-ec3384a07680" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 52.3 65.75">
+  <defs>
+    <style>
+      .uuid-effa063c-b243-4f4f-abf0-e683f6c74d2d {
+        fill: #fdfeff;
+      }
+
+      .uuid-13f74310-1fb5-45aa-a068-ec9f98e14189 {
+        fill: #fff;
+      }
+
+      .uuid-78b9d736-4139-4c75-9e2e-df853dd18015 {
+        fill: none;
+      }
+
+      .uuid-238ae951-f7a1-4e9a-87cd-fec1e89213ed {
+        fill: #f47f20;
+      }
+
+      .uuid-67f9e85a-9a61-420c-b5b8-28d24a5b6d7d {
+        clip-path: url(#uuid-e550ddc0-750c-48a9-b646-350e99b17741);
+      }
+    </style>
+    <clipPath id="uuid-e550ddc0-750c-48a9-b646-350e99b17741">
+      <circle class="uuid-78b9d736-4139-4c75-9e2e-df853dd18015" cx="26.15" cy="24.78" r="21.57" transform="translate(-9.88 24.77) rotate(-43.44)"/>
+    </clipPath>
+  </defs>
+  <g>
+    <path class="uuid-238ae951-f7a1-4e9a-87cd-fec1e89213ed" d="M52.3,26.15c0,8.01-8.04,22.39-15.21,33.61-5.1,7.99-16.79,7.99-21.89,0C8.04,48.54,0,34.16,0,26.15,0,11.71,11.71,0,26.15,0s26.15,11.71,26.15,26.15Z"/>
+    <circle class="uuid-effa063c-b243-4f4f-abf0-e683f6c74d2d" cx="26.15" cy="24.78" r="20.72" transform="translate(-9.88 24.77) rotate(-43.44)"/>
+  </g>
+  <g class="uuid-67f9e85a-9a61-420c-b5b8-28d24a5b6d7d">
+    <g>
+      <g>
+        <rect class="uuid-238ae951-f7a1-4e9a-87cd-fec1e89213ed" x="22.28" y="7.34" width="19.92" height="40.99"/>
+        <rect class="uuid-13f74310-1fb5-45aa-a068-ec9f98e14189" x="34.42" y="11.9" width="5.12" height="5.12"/>
+        <rect class="uuid-13f74310-1fb5-45aa-a068-ec9f98e14189" x="34.42" y="20.82" width="5.12" height="5.12"/>
+        <rect class="uuid-13f74310-1fb5-45aa-a068-ec9f98e14189" x="34.42" y="29.73" width="5.12" height="5.12"/>
+        <rect class="uuid-13f74310-1fb5-45aa-a068-ec9f98e14189" x="34.42" y="38.65" width="5.12" height="5.12"/>
+        <rect class="uuid-13f74310-1fb5-45aa-a068-ec9f98e14189" x="24.94" y="11.9" width="5.12" height="5.12"/>
+        <rect class="uuid-13f74310-1fb5-45aa-a068-ec9f98e14189" x="24.94" y="20.82" width="5.12" height="5.12"/>
+        <rect class="uuid-13f74310-1fb5-45aa-a068-ec9f98e14189" x="24.94" y="29.73" width="5.12" height="5.12"/>
+        <rect class="uuid-13f74310-1fb5-45aa-a068-ec9f98e14189" x="24.94" y="38.65" width="5.12" height="5.12"/>
+      </g>
+      <g>
+        <rect class="uuid-238ae951-f7a1-4e9a-87cd-fec1e89213ed" x="7.62" y="28.08" width="12.89" height="20.25"/>
+        <g>
+          <rect class="uuid-13f74310-1fb5-45aa-a068-ec9f98e14189" x="15.47" y="30.78" width="3.31" height="3.31"/>
+          <rect class="uuid-13f74310-1fb5-45aa-a068-ec9f98e14189" x="15.47" y="36.55" width="3.31" height="3.31"/>
+          <rect class="uuid-13f74310-1fb5-45aa-a068-ec9f98e14189" x="15.47" y="42.31" width="3.31" height="3.31"/>
+        </g>
+        <g>
+          <rect class="uuid-13f74310-1fb5-45aa-a068-ec9f98e14189" x="9.35" y="30.78" width="3.31" height="3.31"/>
+          <rect class="uuid-13f74310-1fb5-45aa-a068-ec9f98e14189" x="9.35" y="36.55" width="3.31" height="3.31"/>
+          <rect class="uuid-13f74310-1fb5-45aa-a068-ec9f98e14189" x="9.35" y="42.31" width="3.31" height="3.31"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>
