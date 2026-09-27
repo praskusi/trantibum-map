@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="uuid-030ee9ca-4347-4476-93a5-7afc1e7b5b77" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52.3 75.75">
+  <defs>
+    <style>
+      .uuid-b6b79de4-da33-4eab-87e5-0b08c16df1ef {
+        fill: #fdfeff;
+      }
+
+      .uuid-d632a3ad-377b-41e6-9383-b47b1aeb6b05 {
+        fill-rule: evenodd;
+      }
+
+      .uuid-d632a3ad-377b-41e6-9383-b47b1aeb6b05, .uuid-e9d3e9a1-78f8-4f5f-8374-1dcfe958df84 {
+        fill: #00b2ae;
+      }
+    </style>
+  </defs>
+  <g>
+    <path class="uuid-e9d3e9a1-78f8-4f5f-8374-1dcfe958df84" d="M52.3,26.15c0,14.44-26.15,49.6-26.15,49.6,0,0-26.15-35.16-26.15-49.6S11.71,0,26.15,0s26.15,11.71,26.15,26.15Z"/>
+    <circle class="uuid-b6b79de4-da33-4eab-87e5-0b08c16df1ef" cx="26.15" cy="24.78" r="20.72" transform="translate(-9.88 24.77) rotate(-43.44)"/>
+  </g>
+  <path class="uuid-d632a3ad-377b-41e6-9383-b47b1aeb6b05" d="M32.66,20.05l10.85-3.59v28.38l-10.85,3.58v-28.38ZM31.22,48.43l-10.45-3.45v-28.38l10.45,3.45v28.38ZM19.33,45.19l-10.54,3.5v-28.42l10.54-3.45v28.38Z"/>
+</svg>
