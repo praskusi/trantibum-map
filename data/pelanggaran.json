@@ -39,7 +39,7 @@
     "tindak_lanjut": "Teguran dan pembubaran",
     "latitude": -0.5062593514942275,
     "longitude": 101.53834536333663,
-    "foto": "img/pelanggaran/2026-01-09-jalan.jpg"
+    "foto": "img/pelanggaran/TBM-2026-003.jpg"
   },
   {
     "id": "TBM-2026-004",
@@ -53,7 +53,7 @@
     "tindak_lanjut": "Teguran dan pembubaran",
     "latitude": -0.5062593514942275,
     "longitude": 101.53834536333663,
-    "foto": "img/pelanggaran/2026-01-10-jalan.jpg"
+    "foto": "img/pelanggaran/TBM-2026-004.jpg"
   },
   {
     "id": "TBM-2026-005",
@@ -67,7 +67,7 @@
     "tindak_lanjut": "Teguran dan pembubaran",
     "latitude": -0.5062593514942275,
     "longitude": 101.53834536333663,
-    "foto": "img/pelanggaran/2026-01-12-jalan.jpg"
+    "foto": "img/pelanggaran/TBM-2026-005.jpg"
   },
   {
     "id": "TBM-2026-006",
@@ -81,7 +81,7 @@
     "tindak_lanjut": "Teguran dan pembubaran",
     "latitude": -0.5062593514942275,
     "longitude": 101.53834536333663,
-    "foto": "img/pelanggaran/2026-01-19-jalan.jpg"
+    "foto": "img/pelanggaran/TBM-2026-006.jpg"
   },
   {
     "id": "TBM-2026-007",
@@ -95,7 +95,7 @@
     "tindak_lanjut": "Teguran dan pembubaran",
     "latitude": -0.5062593514942275,
     "longitude": 101.53834536333663,
-    "foto": "img/pelanggaran/2026-01-24-jalan.jpg"
+    "foto": "img/pelanggaran/TBM-2026-007.jpg"
   },
   {
     "id": "TBM-2026-008",
@@ -109,7 +109,7 @@
     "tindak_lanjut": "Teguran dan pembubaran",
     "latitude": -0.5062593514942275,
     "longitude": 101.53834536333663,
-    "foto": "img/pelanggaran/2026-01-25-jalan.jpg"
+    "foto": "img/pelanggaran/TBM-2026-008.jpg"
   },
   {
     "id": "TBM-2026-009",
@@ -123,7 +123,7 @@
     "tindak_lanjut": "Teguran dan pembubaran",
     "latitude": -0.5062593514942275,
     "longitude": 101.53834536333663,
-    "foto": "img/pelanggaran/2026-01-27-jalan.jpg"
+    "foto": "img/pelanggaran/TBM-2026-009.jpg"
   },
   {
     "id": "TBM-2026-010",
@@ -137,7 +137,7 @@
     "tindak_lanjut": "Teguran dan pembubaran",
     "latitude": -0.5062593514942275,
     "longitude": 101.53834536333663,
-    "foto": "img/pelanggaran/2026-01-29-jalan.jpg"
+    "foto": "img/pelanggaran/TBM-2026-010.jpg"
   },
   {
     "id": "TBM-2026-011",
@@ -148,10 +148,10 @@
     "kategori": "jalan",
     "lokasi": "Jalan Rusdi S Abrus",
     "kejadian": "Aktivitas balap liar",
-    "tindak_lanjut": null,
+    "tindak_lanjut": "Teguran dan pembubaran",
     "latitude": -0.511023,
     "longitude": 101.53597,
-    "foto": "img/pelanggaran/2026-01-03-jalan.jpg"
+    "foto": "img/pelanggaran/TBM-2026-011.jpg"
   },
   {
     "id": "TBM-2026-012",
@@ -162,10 +162,10 @@
     "kategori": "jalan",
     "lokasi": "Jalan Sport Center",
     "kejadian": "Aktivitas balap liar",
-    "tindak_lanjut": null,
+    "tindak_lanjut": "Teguran dan pembubaran",
     "latitude": -0.524155,
     "longitude": 101.531029,
-    "foto": "img/pelanggaran/2026-01-07-jalan.jpg"
+    "foto": "img/pelanggaran/TBM-2026-012.jpg"
   },
   {
     "id": "TBM-2026-013",
@@ -179,7 +179,7 @@
     "tindak_lanjut": "Imbauan kepada pengunjung",
     "latitude": -0.508106,
     "longitude": 101.537593,
-    "foto": "img/pelanggaran/2026-01-01-jalur-hijau.jpg"
+    "foto": "img/pelanggaran/TBM-2026-013.jpg"
   },
   {
     "id": "TBM-2026-014",
@@ -193,7 +193,7 @@
     "tindak_lanjut": "Teguran dan penertiban",
     "latitude": -0.508106,
     "longitude": 101.537593,
-    "foto": "img/pelanggaran/2026-01-09-jalur-hijau.jpg"
+    "foto": "img/pelanggaran/TBM-2026-014.jpg"
   },
   {
     "id": "TBM-2026-015",
@@ -207,7 +207,7 @@
     "tindak_lanjut": "Teguran dan penertiban",
     "latitude": -0.508106,
     "longitude": 101.537593,
-    "foto": "img/pelanggaran/2026-01-10-jalur-hijau.jpg"
+    "foto": "img/pelanggaran/TBM-2026-015.jpg"
   },
   {
     "id": "TBM-2026-016",
@@ -221,13 +221,13 @@
     "tindak_lanjut": "Penertiban",
     "latitude": -0.53388,
     "longitude": 101.570945,
-    "foto": "img/pelanggaran/2026-01-24-jalur-hijau.jpg"
+    "foto": "img/pelanggaran/TBM-2026-016.jpg"
   },
   {
-    "id": "TBM-2025-017",
-    "tahun": 2025,
+    "id": "TBM-2026-017",
+    "tahun": 2026,
     "bulan": 1,
-    "tanggal": "22 Januari 2025",
+    "tanggal": "22 Januari 2026",
     "kecamatan": "Kuantan Tengah",
     "kategori": "jalur_hijau",
     "lokasi": "Taman Jalur",
@@ -235,7 +235,7 @@
     "tindak_lanjut": "Penertiban",
     "latitude": -0.532463,
     "longitude": 101.571165,
-    "foto": "img/pelanggaran/2025-01-22-jalur-hijau.jpg"
+    "foto": "img/pelanggaran/TBM-2026-017.jpg"
   },
   {
     "id": "TBM-2026-018",
@@ -249,7 +249,7 @@
     "tindak_lanjut": "Penertiban",
     "latitude": -0.532463,
     "longitude": 101.571165,
-    "foto": "img/pelanggaran/2026-01-23-jalur-hijau.jpg"
+    "foto": "img/pelanggaran/TBM-2026-018.jpg"
   },
   {
     "id": "TBM-2026-019",
@@ -263,7 +263,7 @@
     "tindak_lanjut": "Teguran dan pembubaran",
     "latitude": -0.506994,
     "longitude": 101.537882,
-    "foto": "img/pelanggaran/2026-01-19-jalur-hijau.jpg"
+    "foto": "img/pelanggaran/TBM-2026-019.jpg"
   },
   {
     "id": "TBM-2026-020",
@@ -277,7 +277,7 @@
     "tindak_lanjut": "Pendataan",
     "latitude": -0.532087,
     "longitude": 101.571965,
-    "foto": "img/pelanggaran/2026-01-26-jalur-hijau.jpg"
+    "foto": "img/pelanggaran/TBM-2026-020.jpg"
   },
   {
     "id": "TBM-2026-021",
@@ -289,9 +289,9 @@
     "lokasi": "Kebun Pemda Kuantan Singingi",
     "kejadian": "Pertambangan Emas Tanpa Izin (PETI)",
     "tindak_lanjut": "Penertiban dan pemusnahan",
-    "latitude": -0.543923,
-    "longitude": 101.470391,
-    "foto": "img/pelanggaran/2026-01-08-lingkungan.jpg"
+    "latitude": -0.526966,
+    "longitude": 101.477772,
+    "foto": "img/pelanggaran/TBM-2026-021.jpg"
   },
   {
     "id": "TBM-2026-022",
@@ -305,7 +305,7 @@
     "tindak_lanjut": "Teguran dan pembinaan untuk menghentikan aktivitas",
     "latitude": -0.5221901423693767,
     "longitude": 101.53160673315514,
-    "foto": "img/pelanggaran/2026-01-14-tempat-usaha.jpg"
+    "foto": "img/pelanggaran/TBM-2026-022.jpg"
   },
   {
     "id": "TBM-2026-023",
@@ -319,13 +319,13 @@
     "tindak_lanjut": "Diberikan surat peringatan",
     "latitude": -0.531634,
     "longitude": 101.572084,
-    "foto": "img/pelanggaran/2026-01-19-tempat-usaha.jpg"
+    "foto": "img/pelanggaran/TBM-2026-023.jpg"
   },
   {
-    "id": "TBM-2025-024",
-    "tahun": 2025,
+    "id": "TBM-2026-024",
+    "tahun": 2026,
     "bulan": 1,
-    "tanggal": "20 Januari 2025",
+    "tanggal": "20 Januari 2026",
     "kecamatan": "Kuantan Tengah",
     "kategori": "bangunan",
     "lokasi": "Kios Pasar Bawah",
@@ -333,13 +333,13 @@
     "tindak_lanjut": "Pengamanan oleh Personel",
     "latitude": -0.532053,
     "longitude": 101.572487,
-    "foto": "img/pelanggaran/2025-01-20-bangunan.jpg"
+    "foto": "img/pelanggaran/TBM-2026-024.jpg"
   },
   {
-    "id": "TBM-2025-025",
-    "tahun": 2025,
+    "id": "TBM-2026-025",
+    "tahun": 2026,
     "bulan": 1,
-    "tanggal": "21 Januari 2025",
+    "tanggal": "21 Januari 2026",
     "kecamatan": "Kuantan Tengah",
     "kategori": "bangunan",
     "lokasi": "Kios Pasar Bawah",
@@ -347,7 +347,7 @@
     "tindak_lanjut": "Pengamanan oleh Personel",
     "latitude": -0.532053,
     "longitude": 101.572487,
-    "foto": "img/pelanggaran/2025-01-21-bangunan.jpg"
+    "foto": "img/pelanggaran/TBM-2026-025.jpg"
   },
   {
     "id": "TBM-2026-026",
@@ -361,7 +361,7 @@
     "tindak_lanjut": "Pembinaan dan pembubaran",
     "latitude": -0.505491,
     "longitude": 101.534627,
-    "foto": "img/pelanggaran/2026-01-01-sosial.jpg"
+    "foto": "img/pelanggaran/TBM-2026-026.jpg"
   },
   {
     "id": "TBM-2026-027",
@@ -375,7 +375,7 @@
     "tindak_lanjut": "Pembinaan dan pembubaran",
     "latitude": -0.505491,
     "longitude": 101.534627,
-    "foto": "img/pelanggaran/2026-01-09-sosial.jpg"
+    "foto": "img/pelanggaran/TBM-2026-027.jpg"
   },
   {
     "id": "TBM-2026-028",
@@ -389,7 +389,7 @@
     "tindak_lanjut": "Pembinaan dan pembubaran",
     "latitude": -0.505491,
     "longitude": 101.534627,
-    "foto": "img/pelanggaran/2026-01-29-sosial.jpg"
+    "foto": "img/pelanggaran/TBM-2026-028.jpg"
   },
   {
     "id": "TBM-2026-029",
@@ -403,7 +403,7 @@
     "tindak_lanjut": "Pembinaan dan pemusnahan",
     "latitude": -0.505491,
     "longitude": 101.534627,
-    "foto": "img/pelanggaran/2026-01-24-sosial.jpg"
+    "foto": "img/pelanggaran/TBM-2026-029.jpg"
   },
   {
     "id": "TBM-2026-030",
@@ -417,7 +417,7 @@
     "tindak_lanjut": "Pembinaan dan pembubaran",
     "latitude": -0.522145,
     "longitude": 101.532728,
-    "foto": "img/pelanggaran/2026-01-07-sosial.jpg"
+    "foto": "img/pelanggaran/TBM-2026-030.jpg"
   },
   {
     "id": "TBM-2026-031",
@@ -431,7 +431,7 @@
     "tindak_lanjut": "Pembinaan dan pembubaran",
     "latitude": -0.508869,
     "longitude": 101.536927,
-    "foto": "img/pelanggaran/2026-01-11-sosial.jpg"
+    "foto": "img/pelanggaran/TBM-2026-031.jpg"
   },
   {
     "id": "TBM-2026-032",
@@ -445,7 +445,7 @@
     "tindak_lanjut": "Pembinaan dan pembubaran",
     "latitude": -0.508869,
     "longitude": 101.536927,
-    "foto": "img/pelanggaran/2026-01-12-sosial.jpg"
+    "foto": "img/pelanggaran/TBM-2026-032.jpg"
   },
   {
     "id": "TBM-2026-033",
@@ -459,7 +459,7 @@
     "tindak_lanjut": "Pembinaan dan pembubaran",
     "latitude": -0.508869,
     "longitude": 101.536927,
-    "foto": "img/pelanggaran/2026-01-27-sosial.jpg"
+    "foto": "img/pelanggaran/TBM-2026-033.jpg"
   },
   {
     "id": "TBM-2026-034",
@@ -473,7 +473,7 @@
     "tindak_lanjut": "Pembinaan dan pembubaran",
     "latitude": -0.508869,
     "longitude": 101.536927,
-    "foto": "img/pelanggaran/2026-01-28-sosial.jpg"
+    "foto": "img/pelanggaran/TBM-2026-034.jpg"
   },
   {
     "id": "TBM-2026-035",
@@ -487,13 +487,13 @@
     "tindak_lanjut": "Teguran dan penertiban",
     "latitude": -0.521411,
     "longitude": 101.542768,
-    "foto": "img/pelanggaran/2026-01-30-sosial.jpg"
+    "foto": "img/pelanggaran/TBM-2026-035.jpg"
   },
   {
-    "id": "TBM-2025-036",
-    "tahun": 2025,
+    "id": "TBM-2026-036",
+    "tahun": 2026,
     "bulan": 1,
-    "tanggal": "19 Januari 2025",
+    "tanggal": "19 Januari 2026",
     "kecamatan": "Kuantan Tengah",
     "kategori": "masyarakat",
     "lokasi": "Kantor DPRD Kabupaten Kuantan Singingi",
@@ -501,13 +501,13 @@
     "tindak_lanjut": "Pengamanan dan pengawalan oleh personel.",
     "latitude": -0.507515,
     "longitude": 101.535104,
-    "foto": "img/pelanggaran/2025-01-19-masyarakat.jpg"
+    "foto": "img/pelanggaran/TBM-2026-036.jpg"
   },
   {
-    "id": "TBM-2025-037",
-    "tahun": 2025,
+    "id": "TBM-2026-037",
+    "tahun": 2026,
     "bulan": 1,
-    "tanggal": "19 Januari 2025",
+    "tanggal": "19 Januari 2026",
     "kecamatan": "Kuantan Tengah",
     "kategori": "masyarakat",
     "lokasi": "Kantor Bupati Kuantan Singingi",
@@ -515,6 +515,6 @@
     "tindak_lanjut": "Pengamanan dan pengawalan oleh personel.",
     "latitude": -0.504598,
     "longitude": 101.537363,
-    "foto": "img/pelanggaran/2025-01-19-masyarakat.jpg"
+    "foto": "img/pelanggaran/TBM-2026-037.jpg"
   }
 ]
