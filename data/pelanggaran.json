@@ -70,20 +70,6 @@
     "foto": "img/pelanggaran/TBM-2026-005.jpg"
   },
   {
-    "id": "TBM-2026-006",
-    "tahun": 2026,
-    "bulan": 1,
-    "tanggal": "19 Januari 2026",
-    "kecamatan": "Kuantan Tengah",
-    "kategori": "jalan",
-    "lokasi": "Komplek Perkantoran Pemda Kuantan Singingi",
-    "kejadian": "Aktivitas balap liar",
-    "tindak_lanjut": "Teguran dan pembubaran",
-    "latitude": -0.5062593514942275,
-    "longitude": 101.53834536333663,
-    "foto": "img/pelanggaran/TBM-2026-006.jpg"
-  },
-  {
     "id": "TBM-2026-007",
     "tahun": 2026,
     "bulan": 1,
