@@ -4575,20 +4575,9 @@
 
       const names =
         kecamatanGeoJson.features
-          .map(feature => {
-
-            const properties =
-              feature.properties || {};
-
-            return (
-              properties.NAMOBJ ||
-              properties.WADMKC ||
-              properties.KECAMATAN ||
-              properties.nama ||
-              ""
-            );
-
-          })
+          .map(feature =>
+            getKecamatanFromFeature(feature)
+          )
           .map(name =>
             String(name).trim()
           )
@@ -4769,23 +4758,16 @@
       selectedName
     ) {
 
-      const properties =
-        feature.properties || {};
-
       const name =
-        String(
-          properties.NAMOBJ ||
-          properties.WADMKC ||
-          properties.KECAMATAN ||
-          properties.nama ||
-          ""
-        ).trim();
+        getKecamatanFromFeature(
+          feature
+        );
 
       const isSelected =
         selectedName &&
         selectedName !== "all" &&
         name.toLowerCase() ===
-        selectedName.toLowerCase();
+        String(selectedName).toLowerCase();
 
       if (isSelected) {
 
@@ -4839,21 +4821,14 @@
               return true;
             }
 
-            const properties =
-              feature.properties || {};
-
             const name =
-              String(
-                properties.NAMOBJ ||
-                properties.WADMKC ||
-                properties.KECAMATAN ||
-                properties.nama ||
-                ""
-              ).trim();
+              getKecamatanFromFeature(
+                feature
+              );
 
             return (
               name.toLowerCase() ===
-              selectedName.toLowerCase()
+              String(selectedName).toLowerCase()
             );
 
           });
@@ -4897,15 +4872,11 @@
             onEachFeature:
               (feature, leafletLayer) => {
 
-                const properties =
-                  feature.properties || {};
-
                 const name =
-                  properties.NAMOBJ ||
-                  properties.WADMKC ||
-                  properties.KECAMATAN ||
-                  properties.nama ||
-                  "Kecamatan";
+                  getKecamatanFromFeature(
+                    feature
+                  ) ||
+                  "KECAMATAN";
 
                 leafletLayer.bindTooltip(
                   String(name),
@@ -5154,15 +5125,84 @@
 
     }
 
+    /* =========================================================
+       NAMA RESMI TAMPILAN KECAMATAN
+       Data GeoJSON tetap asli, sedangkan tampilan
+       menggunakan penulisan yang rapi dan HURUF KAPITAL.
+    ========================================================== */
+
+    const KECAMATAN_DISPLAY_NAMES = {
+
+      "BENAI": "BENAI",
+      "CERENTI": "CERENTI",
+      "GUNUNGTOAR": "GUNUNG TOAR",
+      "HULUKUANTAN": "HULU KUANTAN",
+      "INUMAN": "INUMAN",
+      "KUANTANHILIR": "KUANTAN HILIR",
+      "KUANTANHILIRSEBERANG": "KUANTAN HILIR SEBERANG",
+      "KUANTANTENGAH": "KUANTAN TENGAH",
+      "KUANTANMUDIK": "KUANTAN MUDIK",
+      "LOGASTANAHDARAT": "LOGAS TANAH DARAT",
+      "PANGEAN": "PANGEAN",
+      "PUCUKRANTAU": "PUCUK RANTAU",
+      "SENTAJO RAYA": "SENTAJO RAYA",
+      "SENTAJORAYA": "SENTAJO RAYA",
+      "SINGINGI": "SINGINGI",
+      "SINGINGIHILIR": "SINGINGI HILIR"
+
+    };
+
+    function normalizeKecamatanKey(name) {
+
+      return String(name || "")
+        .trim()
+        .toUpperCase()
+        .replace(/[^A-Z0-9]/g, "");
+
+    }
+
+    function formatKecamatanName(name) {
+
+      const raw =
+        String(name || "")
+          .trim()
+          .toUpperCase();
+
+      const key =
+        normalizeKecamatanKey(raw);
+
+      return (
+        KECAMATAN_DISPLAY_NAMES[key] ||
+        KECAMATAN_DISPLAY_NAMES[raw] ||
+        raw
+      );
+
+    }
+
+    function getKecamatanFromFeature(feature) {
+
+      const properties =
+        feature?.properties || {};
+
+      return formatKecamatanName(
+        properties.NAMOBJ ||
+        properties.WADMKC ||
+        properties.KECAMATAN ||
+        properties.nama ||
+        ""
+      );
+
+    }
+
     function getKecamatan(item) {
 
-      return String(
+      return formatKecamatanName(
         item.kecamatan ??
         item.Kecamatan ??
         item.KECAMATAN ??
         item.NAMOBJ ??
         ""
-      ).trim();
+      );
 
     }
 
