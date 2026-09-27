@@ -623,6 +623,23 @@
       flex-direction: column;
     }
 
+    .layer-master-row {
+      padding-bottom: 8px;
+      margin-bottom: 7px;
+      border-bottom: 1px solid var(--soft-border);
+      font-weight: 800;
+      color: var(--dark-olive);
+    }
+
+    .layer-master-row .check-label {
+      font-weight: 800;
+    }
+
+    .layer-master-row input {
+      width: 17px;
+      height: 17px;
+    }
+
     .layer-name {
       flex: 1 1 auto;
     }
@@ -4091,6 +4108,9 @@
         "layer-list"
       );
 
+    let layerToggleAll =
+      null;
+
     const datasetModal =
       document.getElementById(
         "dataset-modal"
@@ -4622,6 +4642,75 @@
 
       layerList.innerHTML = "";
 
+      /* =======================================================
+         MASTER CHECKBOX — SEMUA LAYER
+      ======================================================== */
+
+      const masterLabel =
+        document.createElement(
+          "label"
+        );
+
+      masterLabel.className =
+        "check-row layer-master-row";
+
+      layerToggleAll =
+        document.createElement(
+          "input"
+        );
+
+      layerToggleAll.type =
+        "checkbox";
+
+      layerToggleAll.id =
+        "layer-toggle-all";
+
+      layerToggleAll.addEventListener(
+        "change",
+        () => {
+
+          toggleAllCategories(
+            layerToggleAll.checked
+          );
+
+        }
+      );
+
+      const masterWrapper =
+        document.createElement(
+          "span"
+        );
+
+      masterWrapper.className =
+        "check-label";
+
+      const masterName =
+        document.createElement(
+          "span"
+        );
+
+      masterName.className =
+        "layer-name";
+
+      masterName.textContent =
+        "Semua Layer";
+
+      masterWrapper.appendChild(
+        masterName
+      );
+
+      masterLabel.appendChild(
+        layerToggleAll
+      );
+
+      masterLabel.appendChild(
+        masterWrapper
+      );
+
+      layerList.appendChild(
+        masterLabel
+      );
+
       CATEGORIES.forEach(category => {
 
         const label =
@@ -4707,6 +4796,8 @@
               checkbox.checked
             );
 
+            updateMasterLayerCheckbox();
+
           }
         );
 
@@ -4746,6 +4837,117 @@
         ].clearLayers();
 
       }
+
+    }
+
+    /* =========================================================
+       TOGGLE SEMUA LAYER
+    ========================================================== */
+
+    function toggleAllCategories(
+      visible
+    ) {
+
+      if (visible) {
+
+        CATEGORIES.forEach(
+          category => {
+
+            visibleCategories.add(
+              category.key
+            );
+
+          }
+        );
+
+        if (activeDataset) {
+
+          renderFilteredMarkers();
+
+        }
+
+      } else {
+
+        CATEGORIES.forEach(
+          category => {
+
+            visibleCategories.delete(
+              category.key
+            );
+
+            categoryLayers[
+              category.key
+            ].clearLayers();
+
+          }
+        );
+
+      }
+
+      syncCategoryCheckboxes();
+      updateMasterLayerCheckbox();
+
+    }
+
+    /* =========================================================
+       UPDATE CHECKBOX CATEGORY + MASTER
+    ========================================================== */
+
+    function syncCategoryCheckboxes() {
+
+      document.querySelectorAll(
+        '#layer-list input[data-category]'
+      )
+      .forEach(
+        checkbox => {
+
+          checkbox.checked =
+            visibleCategories.has(
+              checkbox.dataset.category
+            );
+
+        }
+      );
+
+    }
+
+    function updateMasterLayerCheckbox() {
+
+      if (!layerToggleAll) {
+        return;
+      }
+
+      const total =
+        CATEGORIES.length;
+
+      const visibleCount =
+        CATEGORIES.filter(
+          category =>
+            visibleCategories.has(
+              category.key
+            )
+        ).length;
+
+      layerToggleAll.checked =
+        visibleCount === total;
+
+      layerToggleAll.indeterminate =
+        visibleCount > 0 &&
+        visibleCount < total;
+
+      layerToggleAll.setAttribute(
+        "aria-label",
+        visibleCount === total
+          ? "Sembunyikan semua layer"
+          : "Tampilkan semua layer"
+      );
+
+      layerToggleAll.title =
+        visibleCount === total
+          ? "Sembunyikan semua layer"
+          : visibleCount === 0
+            ? "Tampilkan semua layer"
+            : "Tampilkan semua layer";
 
     }
 
@@ -7667,6 +7869,7 @@
     ========================================================== */
 
     renderLayerControls();
+    updateMasterLayerCheckbox();
 
     // Daftar lokasi penting hanya dimuat ke dalam
     // popup Bantuan. Marker tidak ditampilkan otomatis.
