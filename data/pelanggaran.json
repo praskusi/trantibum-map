@@ -1,0 +1,30 @@
+[
+  {
+    "id": "TBM-2026-001",
+    "tahun": 2026,
+    "bulan": 1,
+    "tanggal": "1 Januari 2026",
+    "kecamatan": "Kuantan Tengah",
+    "kategori": "jalan",
+    "lokasi": "Komplek Perkantoran Pemda Kuantan Singingi",
+    "kejadian": "Aktivitas balap liar",
+    "tindak_lanjut": "Teguran dan pembubaran",
+    "latitude": -0.506372,
+    "longitude": 101.53834,
+    "foto": "img/pelanggaran/2026-01-01-tertib-jalan.png"
+  },
+  {
+    "id": "TBM-2026-002",
+    "tahun": 2026,
+    "bulan": 1,
+    "tanggal": "4 Januari 2026",
+    "kecamatan": "Kuantan Tengah",
+    "kategori": "jalan",
+    "lokasi": "Komplek Perkantoran Pemda Kuantan Singingi",
+    "kejadian": "Aktivitas balap liar ",
+    "tindak_lanjut": "Teguran dan pembubaran.",
+    "latitude": -0.506372,
+    "longitude": 101.53834,
+    "foto": "img/pelanggaran/2026-01-04-tertib-jalan.jpg"
+  }
+]
