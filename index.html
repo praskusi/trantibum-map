@@ -6462,7 +6462,7 @@
         empty.textContent =
           activeDataset
             ? "Lokasi atau data tidak ditemukan."
-            : "Lokasi belum ditemukan. Pilih dataset untuk mencari data pelanggaran.";
+            : "Tidak ditemukan. Data pelanggaran dicari dari dataset aktif.";
 
         sidebarSearchResults.appendChild(
           empty
@@ -6718,6 +6718,12 @@
 
     }
 
+    /* PENCARIAN INTERNAL REALTIME
+       Sumber:
+       - Kecamatan dari kecamatan.geojson
+       - Lokasi penting dari konfigurasi aplikasi
+       - Data pelanggaran dari dataset aktif
+       Belum menggunakan API lokasi eksternal. */
     sidebarSearchInput.addEventListener(
       "input",
       () => {
