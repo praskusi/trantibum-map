@@ -7418,6 +7418,38 @@
 
     }
 
+    /*
+      Pada HP, setelah pengguna memilih hasil pencarian,
+      sidebar otomatis ditutup terlebih dahulu. Setelah animasi
+      penutupan selesai, ukuran peta diperbarui agar area peta
+      kembali penuh sebelum fokus dipindahkan ke lokasi tujuan.
+
+      Di desktop perilaku tidak berubah: sidebar tetap terbuka.
+    */
+    function closeMobileSidebarBeforeNavigation() {
+
+      if (!isMobile()) {
+        return Promise.resolve();
+      }
+
+      closeSidebar();
+
+      return new Promise(resolve => {
+
+        setTimeout(() => {
+
+          map.invalidateSize({
+            pan: false
+          });
+
+          resolve();
+
+        }, 300);
+
+      });
+
+    }
+
     function clearSidebarSearch() {
 
       clearLocationIqSearchState();
@@ -7443,9 +7475,13 @@
 
     }
 
-    function handleSidebarSearchResult(
+    async function handleSidebarSearchResult(
       result
     ) {
+
+      /* Pada HP, tutup sidebar dan tunggu area peta kembali penuh
+         sebelum navigasi ke hasil yang dipilih. */
+      await closeMobileSidebarBeforeNavigation();
 
       if (result.type === "kecamatan") {
 
