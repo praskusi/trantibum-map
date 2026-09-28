@@ -208,6 +208,194 @@
     }
 
     /* =========================================================
+       PENCARIAN SIDEBAR - LOKASI + DATA TRANTIBUM
+    ========================================================== */
+
+    .sidebar-search {
+      position: relative;
+      z-index: 7200;
+      flex: 0 0 auto;
+      padding: 12px 20px 13px;
+      background: var(--warm-off-white);
+      border-bottom: 1px solid var(--soft-border);
+    }
+
+    .sidebar-search-box {
+      position: relative;
+      display: flex;
+      align-items: center;
+      width: 100%;
+      min-height: 42px;
+      border: 1px solid #d4cec2;
+      border-radius: 9px;
+      background: #ffffff;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+      transition:
+        border-color 0.15s ease,
+        box-shadow 0.15s ease;
+    }
+
+    .sidebar-search-box:focus-within {
+      border-color: var(--dark-mustard);
+      box-shadow: 0 0 0 3px rgba(164,117,44,0.13);
+    }
+
+    .sidebar-search-icon {
+      width: 18px;
+      height: 18px;
+      margin-left: 11px;
+      flex: 0 0 auto;
+      color: var(--warm-gray);
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      pointer-events: none;
+    }
+
+    #sidebar-search-input {
+      width: 100%;
+      min-width: 0;
+      height: 40px;
+      padding: 0 11px 0 8px;
+      border: none;
+      outline: none;
+      background: transparent;
+      color: var(--charcoal);
+      font-size: 11.5px;
+    }
+
+    #sidebar-search-input::placeholder {
+      color: #a19e95;
+    }
+
+    #sidebar-search-clear {
+      display: none;
+      width: 26px;
+      height: 26px;
+      margin-right: 7px;
+      flex: 0 0 auto;
+      align-items: center;
+      justify-content: center;
+      border: none;
+      border-radius: 50%;
+      background: transparent;
+      color: var(--warm-gray);
+      font-size: 16px;
+      line-height: 1;
+    }
+
+    #sidebar-search-clear:hover {
+      background: #f2efe8;
+      color: var(--dark-olive);
+    }
+
+    .sidebar-search-results {
+      position: absolute;
+      left: 20px;
+      right: 20px;
+      top: calc(100% - 4px);
+      display: none;
+      max-height: min(360px, calc(100dvh - 160px));
+      overflow-y: auto;
+      border: 1px solid #ddd7cb;
+      border-radius: 9px;
+      background: #ffffff;
+      box-shadow: 0 10px 28px rgba(0,0,0,0.16);
+    }
+
+    .sidebar-search-results.show {
+      display: block;
+    }
+
+    .sidebar-search-section-label {
+      padding: 9px 11px 5px;
+      font-size: 9px;
+      line-height: 1.2;
+      font-weight: 800;
+      color: var(--warm-gray);
+      letter-spacing: 0.15px;
+    }
+
+    .sidebar-search-result {
+      width: 100%;
+      display: grid;
+      grid-template-columns: 28px minmax(0, 1fr);
+      align-items: center;
+      gap: 8px;
+      padding: 9px 11px;
+      border: none;
+      border-top: 1px solid #f0ece4;
+      background: #ffffff;
+      text-align: left;
+      color: var(--charcoal);
+    }
+
+    .sidebar-search-result:hover,
+    .sidebar-search-result:focus-visible {
+      background: #fbf9f3;
+      outline: none;
+    }
+
+    .sidebar-search-result-icon {
+      width: 26px;
+      height: 26px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 7px;
+      background: #f4f1e9;
+      color: var(--dark-olive);
+      font-size: 13px;
+      line-height: 1;
+    }
+
+    .sidebar-search-result-text {
+      min-width: 0;
+    }
+
+    .sidebar-search-result-title {
+      display: block;
+      font-size: 10.8px;
+      line-height: 1.3;
+      font-weight: 800;
+      color: var(--charcoal);
+      overflow-wrap: anywhere;
+    }
+
+    .sidebar-search-result-meta {
+      display: block;
+      margin-top: 2px;
+      font-size: 9.3px;
+      line-height: 1.35;
+      color: var(--warm-gray);
+      overflow-wrap: anywhere;
+    }
+
+    .sidebar-search-empty {
+      padding: 12px 11px;
+      font-size: 10px;
+      line-height: 1.45;
+      color: var(--warm-gray);
+      text-align: center;
+    }
+
+    .sidebar-search-results::-webkit-scrollbar {
+      width: 6px;
+    }
+
+    .sidebar-search-results::-webkit-scrollbar-track {
+      background: #f5f2eb;
+      border-radius: 8px;
+    }
+
+    .sidebar-search-results::-webkit-scrollbar-thumb {
+      background: #c4bfb4;
+      border-radius: 8px;
+    }
+
+    /* =========================================================
        SIDEBAR CONTENT - AREA SCROLL KHUSUS
     ========================================================== */
 
@@ -2813,6 +3001,20 @@
         padding-bottom: 12px;
       }
 
+      .sidebar-search {
+        padding: 10px 16px 11px;
+      }
+
+      .sidebar-search-results {
+        left: 16px;
+        right: 16px;
+        max-height: min(330px, calc(100dvh - 145px));
+      }
+
+      #sidebar-search-input {
+        font-size: 11px;
+      }
+
       .sidebar-content {
         padding-bottom: 0;
         scroll-padding-bottom: 0;
@@ -3132,6 +3334,53 @@
       <div class="agency-name">
         Satuan Polisi Pamong Praja, Pemadam Kebakaran dan Penyelamatan Kabupaten Kuantan Singingi
       </div>
+
+    </div>
+
+    <!-- ====================================================
+         PENCARIAN LOKASI + DATA TRANTIBUM
+    ===================================================== -->
+    <div class="sidebar-search">
+
+      <div class="sidebar-search-box">
+
+        <svg
+          class="sidebar-search-icon"
+          viewBox="0 0 24 24"
+          aria-hidden="true"
+        >
+          <circle cx="11" cy="11" r="6.5"></circle>
+          <path d="m16 16 4 4"></path>
+        </svg>
+
+        <input
+          type="search"
+          id="sidebar-search-input"
+          autocomplete="off"
+          spellcheck="false"
+          placeholder="Cari lokasi atau data..."
+          aria-label="Cari lokasi atau data Trantibum"
+          aria-autocomplete="list"
+          aria-controls="sidebar-search-results"
+        />
+
+        <button
+          type="button"
+          id="sidebar-search-clear"
+          aria-label="Hapus pencarian"
+          title="Hapus pencarian"
+        >
+          ×
+        </button>
+
+      </div>
+
+      <div
+        id="sidebar-search-results"
+        class="sidebar-search-results"
+        role="listbox"
+        aria-label="Hasil pencarian"
+      ></div>
 
     </div>
 
@@ -4581,6 +4830,21 @@
         "layer-list"
       );
 
+    const sidebarSearchInput =
+      document.getElementById(
+        "sidebar-search-input"
+      );
+
+    const sidebarSearchClear =
+      document.getElementById(
+        "sidebar-search-clear"
+      );
+
+    const sidebarSearchResults =
+      document.getElementById(
+        "sidebar-search-results"
+      );
+
     let layerToggleAll =
       null;
 
@@ -5918,7 +6182,599 @@
 
     }
 
-    function getCategory(item) {
+    function getSearchCategoryLabel(item) {
+
+      const category =
+        CATEGORIES.find(
+          entry =>
+            entry.key ===
+            getCategory(item)
+        );
+
+      return (
+        category?.name ||
+        String(
+          item.kategori ||
+          item.category ||
+          "Data Trantibum"
+        )
+      );
+
+    }
+
+    function getSearchItemId(item) {
+
+      return String(
+        item.id ??
+        item.ID ??
+        ""
+      ).trim();
+
+    }
+
+    function searchText(value) {
+
+      return String(value ?? "")
+        .trim()
+        .toLowerCase();
+
+    }
+
+    function getSearchDateText(item) {
+
+      return String(
+        getPelanggaranTanggal(item)
+      ).trim();
+
+    }
+
+    function getSearchLocationText(item) {
+
+      return String(
+        getPelanggaranLokasi(item)
+      ).trim();
+
+    }
+
+    function buildSidebarSearchResults(query) {
+
+      const text =
+        searchText(query);
+
+      if (text.length < 2) {
+        return [];
+      }
+
+      const results = [];
+      const usedKeys = new Set();
+
+      function addResult(result) {
+
+        const key =
+          `${result.type}:${result.key}`;
+
+        if (
+          usedKeys.has(key)
+        ) {
+          return;
+        }
+
+        usedKeys.add(key);
+        results.push(result);
+
+      }
+
+      /* KECAMATAN */
+      if (
+        kecamatanGeoJson &&
+        Array.isArray(
+          kecamatanGeoJson.features
+        )
+      ) {
+
+        kecamatanGeoJson.features
+          .map(feature => ({
+            feature,
+            name:
+              getKecamatanFromFeature(
+                feature
+              )
+          }))
+          .filter(entry =>
+            searchText(
+              entry.name
+            ).includes(text)
+          )
+          .forEach(entry => {
+
+            addResult({
+              type: "kecamatan",
+              key: entry.name,
+              title: entry.name,
+              meta: "Kecamatan",
+              icon: "⌖",
+              feature: entry.feature
+            });
+
+          });
+
+      }
+
+      /* LOKASI PENTING */
+      if (
+        typeof IMPORTANT_LOCATIONS !==
+        "undefined" &&
+        Array.isArray(
+          IMPORTANT_LOCATIONS
+        )
+      ) {
+
+        IMPORTANT_LOCATIONS
+          .filter(location => {
+
+            const haystack = [
+              location.nama,
+              location.alamat
+            ]
+              .map(searchText)
+              .join(" ");
+
+            return haystack.includes(
+              text
+            );
+
+          })
+          .forEach(location => {
+
+            addResult({
+              type: "important",
+              key: location.id,
+              title: location.nama,
+              meta: "Lokasi Penting",
+              icon: "●",
+              location
+            });
+
+          });
+
+      }
+
+      /* DATA PELANGGARAN — mengikuti dataset aktif */
+      if (activeDataset) {
+
+        const datasetData =
+          filterDatasetData();
+
+        datasetData.forEach(item => {
+
+          const categoryName =
+            getSearchCategoryLabel(
+              item
+            );
+
+          const location =
+            getSearchLocationText(
+              item
+            );
+
+          const kejadian =
+            String(
+              getPelanggaranKejadian(
+                item
+              )
+            );
+
+          const tindak =
+            String(
+              getPelanggaranTindakLanjut(
+                item
+              )
+            );
+
+          const tanggal =
+            getSearchDateText(item);
+
+          const kecamatan =
+            getKecamatan(item);
+
+          const id =
+            getSearchItemId(item);
+
+          const haystack = [
+            categoryName,
+            location,
+            kejadian,
+            tindak,
+            tanggal,
+            kecamatan,
+            id
+          ]
+            .map(searchText)
+            .join(" ");
+
+          if (
+            !haystack.includes(text)
+          ) {
+            return;
+          }
+
+          addResult({
+            type: "pelanggaran",
+            key:
+              id ||
+              `${tanggal}|${location}|${kejadian}`,
+            title:
+              kejadian ||
+              categoryName,
+            meta:
+              `${categoryName} • ${tanggal || "Tanggal tidak tersedia"}${location ? ` • ${location}` : ""}`,
+            icon: "●",
+            item
+          });
+
+        });
+
+      }
+
+      return results.slice(0, 7);
+
+    }
+
+    function renderSidebarSearchResults(query) {
+
+      const text =
+        searchText(query);
+
+      sidebarSearchResults.innerHTML = "";
+
+      if (text.length < 2) {
+
+        sidebarSearchResults.classList.remove(
+          "show"
+        );
+
+        sidebarSearchClear.style.display =
+          text.length
+            ? "inline-flex"
+            : "none";
+
+        return;
+
+      }
+
+      const results =
+        buildSidebarSearchResults(
+          text
+        );
+
+      sidebarSearchClear.style.display =
+        "inline-flex";
+
+      if (!results.length) {
+
+        const empty =
+          document.createElement(
+            "div"
+          );
+
+        empty.className =
+          "sidebar-search-empty";
+
+        empty.textContent =
+          activeDataset
+            ? "Lokasi atau data tidak ditemukan."
+            : "Lokasi belum ditemukan. Pilih dataset untuk mencari data pelanggaran.";
+
+        sidebarSearchResults.appendChild(
+          empty
+        );
+
+        sidebarSearchResults.classList.add(
+          "show"
+        );
+
+        return;
+
+      }
+
+      const locationResults =
+        results.filter(result =>
+          result.type !==
+          "pelanggaran"
+        );
+
+      const violationResults =
+        results.filter(result =>
+          result.type ===
+          "pelanggaran"
+        );
+
+      function appendSection(
+        label,
+        sectionResults
+      ) {
+
+        if (!sectionResults.length) {
+          return;
+        }
+
+        const heading =
+          document.createElement(
+            "div"
+          );
+
+        heading.className =
+          "sidebar-search-section-label";
+
+        heading.textContent =
+          label;
+
+        sidebarSearchResults.appendChild(
+          heading
+        );
+
+        sectionResults.forEach(result => {
+
+          const button =
+            document.createElement(
+              "button"
+            );
+
+          button.type =
+            "button";
+
+          button.className =
+            "sidebar-search-result";
+
+          button.setAttribute(
+            "role",
+            "option"
+          );
+
+          const icon =
+            document.createElement(
+              "span"
+            );
+
+          icon.className =
+            "sidebar-search-result-icon";
+
+          icon.textContent =
+            result.icon;
+
+          const textWrap =
+            document.createElement(
+              "span"
+            );
+
+          textWrap.className =
+            "sidebar-search-result-text";
+
+          const title =
+            document.createElement(
+              "span"
+            );
+
+          title.className =
+            "sidebar-search-result-title";
+
+          title.textContent =
+            result.title;
+
+          const meta =
+            document.createElement(
+              "span"
+            );
+
+          meta.className =
+            "sidebar-search-result-meta";
+
+          meta.textContent =
+            result.meta;
+
+          textWrap.appendChild(
+            title
+          );
+
+          textWrap.appendChild(
+            meta
+          );
+
+          button.appendChild(
+            icon
+          );
+
+          button.appendChild(
+            textWrap
+          );
+
+          button.addEventListener(
+            "click",
+            () => {
+
+              handleSidebarSearchResult(
+                result
+              );
+
+            }
+          );
+
+          sidebarSearchResults.appendChild(
+            button
+          );
+
+        });
+
+      }
+
+      appendSection(
+        "LOKASI",
+        locationResults
+      );
+
+      appendSection(
+        "DATA TRANTIBUM",
+        violationResults
+      );
+
+      sidebarSearchResults.classList.add(
+        "show"
+      );
+
+    }
+
+    function closeSidebarSearch() {
+
+      sidebarSearchResults.classList.remove(
+        "show"
+      );
+
+    }
+
+    function clearSidebarSearch() {
+
+      sidebarSearchInput.value = "";
+      sidebarSearchClear.style.display =
+        "none";
+      closeSidebarSearch();
+      sidebarSearchInput.focus();
+
+    }
+
+    function handleSidebarSearchResult(
+      result
+    ) {
+
+      if (result.type === "kecamatan") {
+
+        const name =
+          result.title;
+
+        const mapFeature =
+          result.feature;
+
+        renderKecamatan(
+          name,
+          true
+        );
+
+        closeSidebarSearch();
+        sidebarSearchInput.value =
+          name;
+        sidebarSearchClear.style.display =
+          "inline-flex";
+
+        showToast(
+          `Peta difokuskan ke ${name}.`
+        );
+
+        return;
+
+      }
+
+      if (result.type === "important") {
+
+        const location =
+          result.location;
+
+        showImportantLocation(
+          location,
+          location.lat,
+          location.lng
+        );
+
+        closeSidebarSearch();
+        sidebarSearchInput.value =
+          location.nama;
+        sidebarSearchClear.style.display =
+          "inline-flex";
+
+        return;
+
+      }
+
+      if (result.type === "pelanggaran") {
+
+        const itemId =
+          getSearchItemId(
+            result.item
+          );
+
+        closeSidebarSearch();
+        sidebarSearchInput.value =
+          getPelanggaranKejadian(
+            result.item
+          ) ||
+          getSearchLocationText(
+            result.item
+          );
+        sidebarSearchClear.style.display =
+          "inline-flex";
+
+        focusRecapItem(
+          itemId
+        );
+
+      }
+
+    }
+
+    sidebarSearchInput.addEventListener(
+      "input",
+      () => {
+
+        renderSidebarSearchResults(
+          sidebarSearchInput.value
+        );
+
+      }
+    );
+
+    sidebarSearchInput.addEventListener(
+      "focus",
+      () => {
+
+        if (
+          sidebarSearchInput.value.trim().length >= 2
+        ) {
+
+          renderSidebarSearchResults(
+            sidebarSearchInput.value
+          );
+
+        }
+
+      }
+    );
+
+    sidebarSearchClear.addEventListener(
+      "click",
+      event => {
+
+        event.stopPropagation();
+        clearSidebarSearch();
+
+      }
+    );
+
+    document.addEventListener(
+      "click",
+      event => {
+
+        if (
+          !event.target.closest(
+            ".sidebar-search"
+          )
+        ) {
+
+          closeSidebarSearch();
+
+        }
+
+      }
+    );
+
+        function getCategory(item) {
 
       return normalizeCategory(
         item.kategori ??
@@ -7995,6 +8851,12 @@
 
       map.closePopup();
 
+      if (sidebarSearchInput) {
+        sidebarSearchInput.value = "";
+        sidebarSearchClear.style.display = "none";
+        closeSidebarSearch();
+      }
+
       showToast(
         "Dataset berhasil dihapus."
       );
@@ -8433,76 +9295,9 @@
 
     }
 
-    /* =========================================================
-       GEOCODER SEARCH
-    ========================================================== */
+    /* Pencarian peta dipindahkan ke sidebar. */
 
-    const geocoderControl =
-      L.Control.geocoder({
 
-        defaultMarkGeocode:
-          false,
-
-        position:
-          "topleft",
-
-        placeholder:
-          "Cari lokasi / jalan di Kuansing..."
-
-      })
-      .on(
-        "markgeocode",
-        event => {
-
-          const result =
-            event.geocode;
-
-          if (
-            result.bbox
-          ) {
-
-            map.fitBounds(
-              result.bbox
-            );
-
-          } else if (
-            result.center
-          ) {
-
-            map.setView(
-              result.center,
-              16
-            );
-
-          }
-
-          L.popup()
-            .setLatLng(
-              result.center
-            )
-            .setContent(
-              `
-              <div
-                style="
-                  font-size:11px;
-                  line-height:1.45;
-                "
-              >
-                <strong>
-                  Hasil Pencarian
-                </strong>
-                <br>
-                ${escapeHtml(
-                  result.name
-                )}
-              </div>
-              `
-            )
-            .openOn(map);
-
-        }
-      )
-      .addTo(map);
 
     /* =========================================================
        LOAD KECAMATAN GEOJSON
