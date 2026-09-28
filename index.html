@@ -2811,6 +2811,11 @@
 
     @media (max-width: 700px) {
 
+      /* Keterangan dataset tetap berada di atas tombol REKAP DATA pada HP. */
+      #map-toast {
+        bottom: calc(56px + env(safe-area-inset-bottom));
+      }
+
       #recap-toggle {
         left: 50%;
         bottom: calc(8px + env(safe-area-inset-bottom));
@@ -2914,7 +2919,8 @@
       position: fixed;
 
       left: 50%;
-      bottom: 26px;
+      /* Naikkan keterangan dataset agar tidak tertutup tombol REKAP DATA. */
+      bottom: 58px;
 
       z-index: 8500;
 
