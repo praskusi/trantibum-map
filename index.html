@@ -3041,8 +3041,11 @@
         max-height: min(330px, calc(100dvh - 145px));
       }
 
+      /* Jangan biarkan browser HP melakukan auto-zoom saat kolom pencarian disentuh.
+         Ukuran font minimal 16px mencegah text input diperbesar otomatis pada
+         banyak browser mobile, khususnya Safari iOS. */
       #sidebar-search-input {
-        font-size: 11px;
+        font-size: 16px;
       }
 
       .sidebar-content {
