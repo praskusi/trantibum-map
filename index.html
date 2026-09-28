@@ -7138,11 +7138,15 @@
       const apiEnabled =
         hasLocationIqApiKey();
 
-      sidebarSearchProvider.classList.toggle(
-        "show",
-        apiEnabled &&
-        text.length >= 3
-      );
+      if (sidebarSearchProvider) {
+
+        sidebarSearchProvider.classList.toggle(
+          "show",
+          apiEnabled &&
+          text.length >= 3
+        );
+
+      }
 
       if (
         text.length < 2
