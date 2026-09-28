@@ -6491,6 +6491,11 @@
               signal:
                 controller.signal,
 
+              /* Browser cross-origin requests send the site origin as
+                 the HTTP Referer. Keep this explicit for LocationIQ. */
+              referrerPolicy:
+                "origin",
+
               headers: {
                 "Accept":
                   "application/json"
@@ -6551,6 +6556,11 @@
 
                 signal:
                   controller.signal,
+
+                /* Browser cross-origin requests send the site origin as
+                   the HTTP Referer. Keep this explicit for LocationIQ. */
+                referrerPolicy:
+                  "origin",
 
                 headers: {
                   "Accept":
