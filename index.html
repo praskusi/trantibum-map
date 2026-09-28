@@ -1503,7 +1503,7 @@
       position: fixed;
 
       left: calc(var(--sidebar-width) + 14px);
-      top: 152px;
+      top: 16px;
 
       z-index: 6400;
 
@@ -1629,13 +1629,12 @@
     /* =========================================================
        DESKTOP MAP CONTROL STACK
        Urutan dari atas ke bawah:
-       1. Zoom (+ / -)
-       2. Search
-       3. Hide / Show Sidebar
+       1. Tombol Sidebar
+       2. Zoom (+ / -)
     ========================================================== */
 
     .leaflet-top.leaflet-left {
-      top: 16px !important;
+      top: 64px !important;
       left: calc(var(--sidebar-width) + 14px) !important;
       margin: 0 !important;
 
@@ -3021,10 +3020,10 @@
       }
 
       /* MAP CONTROL STACK HP
-         Urutan: Zoom -> Search -> Hide Sidebar */
+         Urutan: Tombol Sidebar -> Zoom */
       .leaflet-top.leaflet-left {
         position: fixed !important;
-        top: 10px !important;
+        top: 58px !important;
         left: auto !important;
         right: 10px !important;
         width: auto;
@@ -3054,11 +3053,11 @@
         margin: 0 !important;
       }
 
-      /* TOGGLE HP: tepat di bawah SEARCH */
+      /* TOGGLE HP: di atas tombol ZOOM */
       #sidebar-toggle {
         left: auto !important;
         right: 10px;
-        top: 144px;
+        top: 10px;
 
         width: 40px;
         height: 40px;
