@@ -2292,6 +2292,403 @@
     }
 
     /* =========================================================
+       REKAP DATA - BOTTOM SHEET
+       Menampilkan seluruh data sesuai dataset aktif.
+       Klik lokasi -> peta fokus ke titik dan popup dibuka.
+    ========================================================== */
+
+    #recap-toggle {
+      position: fixed;
+      left: calc(
+        var(--sidebar-width) +
+        ((100vw - var(--sidebar-width)) / 2)
+      );
+      bottom: 9px;
+      z-index: 8900;
+
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 7px;
+
+      min-width: 122px;
+      height: 34px;
+      padding: 0 13px;
+
+      border: none;
+      border-radius: 9px;
+
+      color: var(--dark-olive);
+      background: rgba(255, 255, 255, 0.97);
+
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: 0.15px;
+
+      box-shadow:
+        0 3px 12px rgba(0, 0, 0, 0.18);
+
+      transform: translateX(-50%);
+      transition:
+        background 0.15s ease,
+        transform 0.15s ease,
+        box-shadow 0.15s ease;
+    }
+
+    #recap-toggle:hover {
+      background: #ffffff;
+      transform: translateX(-50%) translateY(-1px);
+      box-shadow:
+        0 5px 16px rgba(0, 0, 0, 0.20);
+    }
+
+    #recap-toggle-icon {
+      width: 15px;
+      height: 15px;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 2.2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    #recap-panel {
+      position: fixed;
+      left: var(--sidebar-width);
+      right: 0;
+      bottom: 0;
+      z-index: 7800;
+
+      height: min(52vh, 440px);
+
+      display: flex;
+      flex-direction: column;
+
+      border-top: 2px solid var(--dark-mustard);
+      border-radius: 13px 13px 0 0;
+      background: #ffffff;
+
+      box-shadow:
+        0 -8px 30px rgba(0, 0, 0, 0.20);
+
+      overflow: hidden;
+
+      transform: translateY(105%);
+      transition: transform 0.28s ease;
+    }
+
+    #recap-panel.show {
+      transform: translateY(0);
+    }
+
+    body.sidebar-collapsed #recap-panel {
+      left: 0;
+    }
+
+    body.sidebar-collapsed #recap-toggle {
+      left: 50%;
+    }
+
+    .recap-panel-header {
+      flex: 0 0 auto;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+
+      padding: 11px 14px;
+
+      background:
+        linear-gradient(
+          135deg,
+          var(--dark-olive),
+          var(--khaki-green)
+        );
+
+      border-bottom: 1px solid rgba(255,255,255,0.16);
+      color: #ffffff;
+    }
+
+    .recap-title-wrap {
+      min-width: 0;
+    }
+
+    .recap-title {
+      font-size: 13px;
+      line-height: 1.2;
+      font-weight: 800;
+      letter-spacing: 0.15px;
+    }
+
+    .recap-subtitle {
+      margin-top: 3px;
+      font-size: 9.5px;
+      line-height: 1.35;
+      color: #e9e6da;
+    }
+
+    .recap-close {
+      width: 30px;
+      height: 30px;
+      flex: 0 0 auto;
+
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+
+      border: none;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.13);
+      color: #ffffff;
+
+      font-size: 19px;
+      line-height: 1;
+    }
+
+    .recap-close:hover {
+      background: rgba(255,255,255,0.24);
+    }
+
+    .recap-panel-body {
+      flex: 1 1 auto;
+      min-height: 0;
+      overflow: auto;
+      -webkit-overflow-scrolling: touch;
+      padding: 0 0 56px;
+      background: #ffffff;
+    }
+
+    .recap-table {
+      width: 100%;
+      min-width: 820px;
+    }
+
+    .recap-table-head,
+    .recap-row {
+      display: grid;
+      grid-template-columns:
+        minmax(170px, 1.05fr)
+        112px
+        minmax(210px, 1.25fr)
+        minmax(240px, 1.35fr)
+        minmax(220px, 1.2fr);
+      gap: 0;
+    }
+
+    .recap-table-head {
+      position: sticky;
+      top: 0;
+      z-index: 2;
+
+      background: #f6f3eb;
+      border-bottom: 1px solid #ddd8cc;
+
+      font-size: 10px;
+      font-weight: 800;
+      color: var(--dark-olive);
+    }
+
+    .recap-head-cell {
+      padding: 10px 12px;
+      border-right: 1px solid #e7e1d6;
+    }
+
+    .recap-head-cell:last-child {
+      border-right: none;
+    }
+
+    .recap-row {
+      border-bottom: 1px solid #ece8df;
+      background: #ffffff;
+      transition: background 0.12s ease;
+    }
+
+    .recap-row:nth-child(even) {
+      background: #fbfaf7;
+    }
+
+    .recap-row:hover {
+      background: #f6f1e6;
+    }
+
+    .recap-cell {
+      min-width: 0;
+      padding: 10px 12px;
+
+      font-size: 10.5px;
+      line-height: 1.45;
+      color: var(--charcoal);
+      overflow-wrap: anywhere;
+      border-right: 1px solid #f0ece4;
+    }
+
+    .recap-cell:last-child {
+      border-right: none;
+    }
+
+    .recap-category {
+      font-weight: 800;
+      color: var(--dark-olive);
+    }
+
+    .recap-date {
+      font-weight: 700;
+      color: var(--charcoal);
+    }
+
+    .recap-location-button {
+      display: inline-flex;
+      align-items: flex-start;
+      gap: 6px;
+
+      padding: 0;
+      border: none;
+      background: transparent;
+      color: var(--dark-olive);
+      text-align: left;
+
+      font-size: 10.5px;
+      line-height: 1.45;
+      font-weight: 800;
+      text-decoration: underline;
+      text-decoration-color: rgba(164, 117, 44, 0.45);
+      text-underline-offset: 2px;
+    }
+
+    .recap-location-button:hover {
+      color: var(--dark-mustard);
+      text-decoration-color: currentColor;
+    }
+
+    .recap-location-icon {
+      flex: 0 0 auto;
+      margin-top: 1px;
+      width: 12px;
+      height: 12px;
+      color: var(--dark-mustard);
+    }
+
+    .recap-location-disabled {
+      color: var(--warm-gray);
+      font-weight: 600;
+    }
+
+    .recap-empty {
+      display: none;
+      padding: 28px 18px;
+      text-align: center;
+      font-size: 11px;
+      line-height: 1.5;
+      color: var(--warm-gray);
+    }
+
+    .recap-empty.show {
+      display: block;
+    }
+
+    .recap-mobile-note {
+      display: none;
+    }
+
+    @media (max-width: 700px) {
+
+      #recap-toggle {
+        left: 50%;
+        bottom: calc(8px + env(safe-area-inset-bottom));
+        min-width: 116px;
+        height: 36px;
+      }
+
+      #recap-panel {
+        left: 0;
+        right: 0;
+        height: min(67vh, 560px);
+        border-radius: 12px 12px 0 0;
+      }
+
+      .recap-panel-header {
+        padding: 10px 12px;
+      }
+
+      .recap-title {
+        font-size: 12px;
+      }
+
+      .recap-subtitle {
+        font-size: 9px;
+      }
+
+      .recap-panel-body {
+        padding: 8px 10px calc(64px + env(safe-area-inset-bottom));
+        overflow-x: hidden;
+      }
+
+      .recap-mobile-note {
+        display: block;
+        margin-bottom: 8px;
+        padding: 8px 10px;
+        border-radius: 7px;
+        background: #f8f6ef;
+        color: var(--warm-gray);
+        font-size: 9px;
+        line-height: 1.4;
+      }
+
+      .recap-table {
+        min-width: 0;
+      }
+
+      .recap-table-head {
+        display: none;
+      }
+
+      .recap-row {
+        display: block;
+        margin-bottom: 9px;
+        border: 1px solid #e2ddd3;
+        border-radius: 9px;
+        overflow: hidden;
+        background: #ffffff;
+        box-shadow: 0 2px 7px rgba(0,0,0,0.06);
+      }
+
+      .recap-row:nth-child(even),
+      .recap-row:hover {
+        background: #ffffff;
+      }
+
+      .recap-cell {
+        display: grid;
+        grid-template-columns: 94px minmax(0, 1fr);
+        gap: 9px;
+        padding: 8px 10px;
+        border-right: none;
+        border-bottom: 1px solid #f0ece4;
+        font-size: 10px;
+      }
+
+      .recap-cell:last-child {
+        border-bottom: none;
+      }
+
+      .recap-cell::before {
+        content: attr(data-label);
+        font-size: 9px;
+        line-height: 1.35;
+        font-weight: 800;
+        color: var(--warm-gray);
+      }
+
+      .recap-category,
+      .recap-date,
+      .recap-location-button,
+      .recap-location-disabled {
+        font-size: 10px;
+      }
+    }
+
+    /* =========================================================
        MAP TOAST
     ========================================================== */
 
@@ -3794,6 +4191,71 @@
   </div>
 
   <!-- ========================================================
+       REKAP DATA BOTTOM SHEET
+  ========================================================= -->
+  <button
+    type="button"
+    id="recap-toggle"
+    aria-label="Buka rekap data Trantibum"
+    aria-expanded="false"
+    title="Rekap Data Trantibum"
+  >
+    <svg
+      id="recap-toggle-icon"
+      viewBox="0 0 24 24"
+      aria-hidden="true"
+    >
+      <path d="m6 9 6 6 6-6"></path>
+    </svg>
+    <span id="recap-toggle-text">REKAP DATA</span>
+  </button>
+
+  <section
+    id="recap-panel"
+    aria-hidden="true"
+  >
+    <div class="recap-panel-header">
+      <div class="recap-title-wrap">
+        <div class="recap-title">REKAP DATA TRANTIBUM</div>
+        <div id="recap-subtitle" class="recap-subtitle">
+          Belum ada dataset aktif
+        </div>
+      </div>
+
+      <button
+        type="button"
+        id="recap-close"
+        class="recap-close"
+        aria-label="Tutup rekap data"
+        title="Tutup"
+      >
+        ×
+      </button>
+    </div>
+
+    <div class="recap-panel-body">
+      <div class="recap-mobile-note">
+        Ketuk nama <strong>Lokasi</strong> untuk langsung menuju titik pelanggaran pada peta.
+      </div>
+
+      <div id="recap-empty" class="recap-empty">
+        Belum ada data untuk ditampilkan.
+      </div>
+
+      <div id="recap-table" class="recap-table">
+        <div class="recap-table-head">
+          <div class="recap-head-cell">Jenis Pelanggaran</div>
+          <div class="recap-head-cell">Tanggal</div>
+          <div class="recap-head-cell">Lokasi</div>
+          <div class="recap-head-cell">Kejadian</div>
+          <div class="recap-head-cell">Tindak Lanjut</div>
+        </div>
+        <div id="recap-table-body"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================
        TOAST
   ========================================================= -->
   <div id="map-toast"></div>
@@ -4042,6 +4504,10 @@
         CATEGORIES.map(category => category.key)
       );
 
+    /* Referensi marker untuk navigasi dari Rekap Data. */
+    let recapMarkerRegistry =
+      new Map();
+
     /* =========================================================
        ELEMENT
     ========================================================== */
@@ -4171,6 +4637,51 @@
     const mapToast =
       document.getElementById(
         "map-toast"
+      );
+
+    const recapToggle =
+      document.getElementById(
+        "recap-toggle"
+      );
+
+    const recapToggleIcon =
+      document.getElementById(
+        "recap-toggle-icon"
+      );
+
+    const recapToggleText =
+      document.getElementById(
+        "recap-toggle-text"
+      );
+
+    const recapPanel =
+      document.getElementById(
+        "recap-panel"
+      );
+
+    const recapClose =
+      document.getElementById(
+        "recap-close"
+      );
+
+    const recapSubtitle =
+      document.getElementById(
+        "recap-subtitle"
+      );
+
+    const recapTable =
+      document.getElementById(
+        "recap-table"
+      );
+
+    const recapTableBody =
+      document.getElementById(
+        "recap-table-body"
+      );
+
+    const recapEmpty =
+      document.getElementById(
+        "recap-empty"
       );
 
     const aboutModal =
@@ -6248,6 +6759,372 @@
     }
 
     /* =========================================================
+       REKAP DATA
+    ========================================================== */
+
+    function recapCategoryName(categoryKey) {
+
+      const category =
+        CATEGORIES.find(
+          item => item.key === categoryKey
+        );
+
+      return category
+        ? category.name
+        : "Data Trantibum";
+
+    }
+
+    function renderRecapData() {
+
+      if (!recapTableBody) {
+        return;
+      }
+
+      recapTableBody.innerHTML = "";
+
+      if (!activeDataset) {
+
+        recapTable.style.display = "none";
+        recapEmpty.textContent =
+          "Belum ada dataset aktif. Klik “Jelajahi Data Trantibum” untuk memilih data.";
+        recapEmpty.classList.add("show");
+        recapSubtitle.textContent =
+          "Belum ada dataset aktif";
+        return;
+
+      }
+
+      const data =
+        filterDatasetData()
+          .slice()
+          .sort((a, b) => {
+
+            const dateA =
+              parsePelanggaranDate(
+                getPelanggaranTanggal(a)
+              );
+
+            const dateB =
+              parsePelanggaranDate(
+                getPelanggaranTanggal(b)
+              );
+
+            if (
+              Number.isFinite(dateA) &&
+              Number.isFinite(dateB)
+            ) {
+              return dateA - dateB;
+            }
+
+            return 0;
+          });
+
+      recapSubtitle.textContent =
+        `${getMonthLabel(activeDataset.month)} ${activeDataset.year} • ${
+          activeDataset.kecamatan === "all"
+            ? "Semua Kecamatan"
+            : activeDataset.kecamatan
+        } • ${data.length} data`;
+
+      if (!data.length) {
+
+        recapTable.style.display = "none";
+        recapEmpty.textContent =
+          "Tidak ada data pelanggaran pada dataset yang dipilih.";
+        recapEmpty.classList.add("show");
+        return;
+
+      }
+
+      recapTable.style.display = "block";
+      recapEmpty.classList.remove("show");
+
+      data.forEach(item => {
+
+        const row =
+          document.createElement("div");
+
+        row.className = "recap-row";
+
+        const categoryKey =
+          getCategory(item);
+
+        const locationText =
+          String(
+            getPelanggaranLokasi(item) || "-"
+          ).trim();
+
+        const lat =
+          getLatitude(item);
+
+        const lng =
+          getLongitude(item);
+
+        const hasCoords =
+          Number.isFinite(lat) &&
+          Number.isFinite(lng);
+
+        const cells = [
+          {
+            label: "Jenis Pelanggaran",
+            className: "recap-category",
+            value: recapCategoryName(categoryKey)
+          },
+          {
+            label: "Tanggal",
+            className: "recap-date",
+            value: getPelanggaranTanggal(item)
+          },
+          {
+            label: "Lokasi",
+            className: "recap-location",
+            value: locationText
+          },
+          {
+            label: "Kejadian",
+            className: "",
+            value: getPelanggaranKejadian(item)
+          },
+          {
+            label: "Tindak Lanjut",
+            className: "",
+            value: getPelanggaranTindakLanjut(item)
+          }
+        ];
+
+        cells.forEach((cell, index) => {
+
+          const element =
+            document.createElement("div");
+
+          element.className =
+            `recap-cell ${cell.className}`.trim();
+
+          element.dataset.label =
+            cell.label;
+
+          if (index === 2 && hasCoords) {
+
+            const button =
+              document.createElement("button");
+
+            button.type = "button";
+            button.className =
+              "recap-location-button";
+            button.title =
+              "Tampilkan lokasi pada peta";
+
+            const icon =
+              document.createElementNS(
+                "http://www.w3.org/2000/svg",
+                "svg"
+              );
+
+            icon.setAttribute("viewBox", "0 0 24 24");
+            icon.setAttribute("aria-hidden", "true");
+            icon.classList.add("recap-location-icon");
+            icon.innerHTML =
+              '<path d="M12 21s7-6.1 7-12a7 7 0 1 0-14 0c0 5.9 7 12 7 12Z"></path>' +
+              '<circle cx="12" cy="9" r="2.3"></circle>';
+
+            const text =
+              document.createElement("span");
+            text.textContent = cell.value;
+
+            button.appendChild(icon);
+            button.appendChild(text);
+
+            button.addEventListener(
+              "click",
+              () => {
+                focusRecapItem(item.id);
+              }
+            );
+
+            element.appendChild(button);
+
+          } else {
+
+            const text =
+              document.createElement("span");
+
+            if (index === 2) {
+              text.className =
+                "recap-location-disabled";
+            }
+
+            text.textContent =
+              cell.value;
+
+            element.appendChild(text);
+
+          }
+
+          row.appendChild(element);
+
+        });
+
+        recapTableBody.appendChild(row);
+
+      });
+
+    }
+
+    function closeRecapPanel() {
+
+      recapPanel.classList.remove("show");
+      recapPanel.setAttribute("aria-hidden", "true");
+      recapToggle.setAttribute("aria-expanded", "false");
+      recapToggle.setAttribute(
+        "aria-label",
+        "Buka rekap data Trantibum"
+      );
+      recapToggle.title =
+        "Buka rekap data Trantibum";
+      recapToggleText.textContent =
+        "REKAP DATA";
+      recapToggleIcon.innerHTML =
+        '<path d="m6 9 6 6 6-6"></path>';
+
+    }
+
+    function openRecapPanel() {
+
+      renderRecapData();
+
+      recapPanel.classList.add("show");
+      recapPanel.setAttribute("aria-hidden", "false");
+      recapToggle.setAttribute("aria-expanded", "true");
+      recapToggle.setAttribute(
+        "aria-label",
+        "Tutup rekap data Trantibum"
+      );
+      recapToggle.title =
+        "Tutup rekap data Trantibum";
+      recapToggleText.textContent =
+        "TUTUP REKAP";
+      recapToggleIcon.innerHTML =
+        '<path d="m6 15 6-6 6 6"></path>';
+
+    }
+
+    function focusRecapItem(itemId) {
+
+      const key =
+        String(itemId ?? "");
+
+      if (!key) {
+        showToast("Data pelanggaran tidak memiliki ID.");
+        return;
+      }
+
+      let entry =
+        recapMarkerRegistry.get(key);
+
+      if (!entry) {
+        showToast(
+          "Titik pelanggaran belum tersedia pada layer yang tampil."
+        );
+        return;
+      }
+
+      /*
+        Bila layer kategori sedang disembunyikan,
+        aktifkan kembali agar hasil rekap benar-benar
+        dapat ditemukan pada peta.
+      */
+      if (!visibleCategories.has(entry.category.key)) {
+
+        visibleCategories.add(
+          entry.category.key
+        );
+
+        syncCategoryCheckboxes();
+        updateMasterLayerCheckbox();
+        renderFilteredMarkers();
+
+        entry =
+          recapMarkerRegistry.get(key);
+
+        showToast(
+          `Layer ${entry?.category?.name || "pelanggaran"} diaktifkan untuk menampilkan lokasi.`
+        );
+
+      }
+
+      if (!entry) {
+        return;
+      }
+
+      closeRecapPanel();
+
+      const target =
+        [entry.lat, entry.lng];
+
+      map.flyTo(
+        target,
+        Math.max(16, map.getZoom()),
+        {
+          animate: true,
+          duration: 0.7
+        }
+      );
+
+      setTimeout(
+        () => {
+
+          const latest =
+            recapMarkerRegistry.get(key);
+
+          if (!latest) {
+            return;
+          }
+
+          const popupIndex =
+            latest.index;
+
+          latest.marker.setPopupContent(
+            createPopupCarouselContent(
+              latest.group.items[popupIndex],
+              latest.category,
+              popupIndex,
+              latest.group.items.length
+            )
+          );
+
+          latest.marker.openPopup();
+
+          attachPelanggaranCarousel(
+            latest.marker,
+            latest.group,
+            latest.category,
+            popupIndex
+          );
+
+        },
+        650
+      );
+
+    }
+
+    recapToggle.addEventListener(
+      "click",
+      () => {
+        if (recapPanel.classList.contains("show")) {
+          closeRecapPanel();
+        } else {
+          openRecapPanel();
+        }
+      }
+    );
+
+    recapClose.addEventListener(
+      "click",
+      closeRecapPanel
+    );
+
+    /* =========================================================
        RENDER MARKERS
     ========================================================== */
 
@@ -6346,6 +7223,7 @@
     function renderFilteredMarkers() {
 
       clearAllCategoryLayers();
+      recapMarkerRegistry.clear();
 
       const data =
         filterDatasetData();
@@ -6435,12 +7313,41 @@
             ]
           );
 
+          /* Simpan referensi agar Rekap Data dapat
+             langsung membuka marker yang tepat. */
+          group.items.forEach(
+            (item, index) => {
+
+              const itemId =
+                String(item.id ?? "");
+
+              if (!itemId) {
+                return;
+              }
+
+              recapMarkerRegistry.set(
+                itemId,
+                {
+                  marker,
+                  group,
+                  category,
+                  index,
+                  lat: group.lat,
+                  lng: group.lng
+                }
+              );
+
+            }
+          );
+
         }
       );
 
       focusFilteredDataOnMap(
         data
       );
+
+      renderRecapData();
 
     }
 
@@ -7076,6 +7983,8 @@
         null;
 
       clearAllCategoryLayers();
+      recapMarkerRegistry.clear();
+      renderRecapData();
 
       renderKecamatan(
         "all",
