@@ -4298,27 +4298,19 @@
           "sidebar-collapsed"
         );
 
-      if (collapsed) {
+      /* Ikon sidebar selalu menggunakan menu garis tiga.
+         Yang berubah hanya tooltip sesuai kondisi sidebar. */
+      sidebarToggleIcon.innerHTML =
+        '<path d="M4 6h16"></path>' +
+        '<path d="M4 12h16"></path>' +
+        '<path d="M4 18h16"></path>';
 
-        sidebarToggleIcon.innerHTML =
-          '<path d="m9 5 7 7-7 7"></path>';
-
-        sidebarToggle.setAttribute(
-          "title",
-          "Tampilkan sidebar"
-        );
-
-      } else {
-
-        sidebarToggleIcon.innerHTML =
-          '<path d="m15 5-7 7 7 7"></path>';
-
-        sidebarToggle.setAttribute(
-          "title",
-          "Sembunyikan sidebar"
-        );
-
-      }
+      sidebarToggle.setAttribute(
+        "title",
+        collapsed
+          ? "Tampilkan sidebar"
+          : "Sembunyikan sidebar"
+      );
 
     }
 
