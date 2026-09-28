@@ -4932,6 +4932,9 @@
     let locationIqLoading =
       false;
 
+    let locationIqError =
+      "";
+
     let locationIqMarker =
       null;
 
@@ -6418,50 +6421,76 @@
       locationIqController =
         controller;
 
+      locationIqError =
+        "";
+
       try {
 
-        const params =
+        /*
+          Untuk pencarian umum seperti:
+          - taman
+          - pasar
+          - kantor
+          - jalan
+          - Teluk Kuantan
+
+          query diperkuat dengan konteks Kuantan Singingi
+          agar hasil lebih terfokus ke wilayah aplikasi.
+        */
+        const scopedQuery =
+          `${query}, Kuantan Singingi, Riau, Indonesia`;
+
+        const commonParams = {
+          key:
+            CONFIG.locationIqApiKey,
+
+          countrycodes:
+            "id",
+
+          viewbox:
+            CONFIG.locationIqViewbox,
+
+          bounded:
+            String(
+              CONFIG.locationIqBounded
+            ),
+
+          limit:
+            String(
+              CONFIG.locationIqLimit
+            ),
+
+          "accept-language":
+            "id",
+
+          normalizecity:
+            "1",
+
+          dedupe:
+            "1"
+        };
+
+        /*
+          LANGKAH 1
+          Autocomplete — sumber utama untuk hasil saat mengetik.
+        */
+        const autocompleteParams =
           new URLSearchParams({
-
-            key:
-              CONFIG.locationIqApiKey,
-
+            ...commonParams,
             q:
-              query,
-
-            countrycodes:
-              "id",
-
-            viewbox:
-              CONFIG.locationIqViewbox,
-
-            bounded:
-              String(
-                CONFIG.locationIqBounded
-              ),
-
-            limit:
-              String(
-                CONFIG.locationIqLimit
-              ),
-
-            "accept-language":
-              "id",
-
-            normalizecity:
-              "1",
-
-            dedupe:
-              "1"
-
+              scopedQuery
           });
 
-        const response =
+        const autocompleteResponse =
           await fetch(
-            `https://api.locationiq.com/v1/autocomplete?${params.toString()}`,
+            `https://api.locationiq.com/v1/autocomplete?${autocompleteParams.toString()}`,
             {
-              method: "GET",
-              signal: controller.signal,
+              method:
+                "GET",
+
+              signal:
+                controller.signal,
+
               headers: {
                 "Accept":
                   "application/json"
@@ -6470,96 +6499,221 @@
           );
 
         if (
-          !response.ok
+          !autocompleteResponse.ok
         ) {
 
           throw new Error(
-            `LocationIQ HTTP ${response.status}`
+            `LocationIQ Autocomplete HTTP ${autocompleteResponse.status}`
           );
 
         }
 
-        const json =
-          await response.json();
+        const autocompleteJson =
+          await autocompleteResponse.json();
+
+        let rawResults =
+          Array.isArray(
+            autocompleteJson
+          )
+            ? autocompleteJson
+            : [];
+
+        /*
+          LANGKAH 2
+          Fallback ke Search / Forward Geocoding bila
+          Autocomplete tidak mengembalikan hasil.
+          Endpoint Search juga didukung LocationIQ.
+        */
+        if (
+          rawResults.length === 0
+        ) {
+
+          const searchParams =
+            new URLSearchParams({
+              ...commonParams,
+
+              q:
+                scopedQuery,
+
+              format:
+                "json",
+
+              addressdetails:
+                "1"
+            });
+
+          const searchResponse =
+            await fetch(
+              `https://api.locationiq.com/v1/search?${searchParams.toString()}`,
+              {
+                method:
+                  "GET",
+
+                signal:
+                  controller.signal,
+
+                headers: {
+                  "Accept":
+                    "application/json"
+                }
+              }
+            );
+
+          if (
+            !searchResponse.ok
+          ) {
+
+            throw new Error(
+              `LocationIQ Search HTTP ${searchResponse.status}`
+            );
+
+          }
+
+          const searchJson =
+            await searchResponse.json();
+
+          rawResults =
+            Array.isArray(
+              searchJson
+            )
+              ? searchJson
+              : [];
+
+        }
 
         if (
           requestId !==
           locationIqRequestId
         ) {
+
           return;
+
         }
 
         locationIqResults =
-          Array.isArray(json)
-            ? json
-                .filter(
-                  item =>
-                    item &&
-                    Number.isFinite(
-                      Number(item.lat)
-                    ) &&
-                    Number.isFinite(
-                      Number(item.lon)
-                    )
+          rawResults
+            .filter(
+              item =>
+                item &&
+                Number.isFinite(
+                  Number(item.lat)
+                ) &&
+                Number.isFinite(
+                  Number(item.lon)
                 )
-                .map(
-                  item => {
+            )
+            .map(
+              item => {
 
-                    const title =
-                      String(
-                        item.display_place ||
-                        item.address?.name ||
-                        item.display_name ||
-                        "Lokasi umum"
-                      ).trim();
+                const addressObject =
+                  item.address ||
+                  {};
 
-                    const address =
-                      String(
-                        item.display_address ||
-                        item.display_name ||
-                        ""
-                      ).trim();
+                const title =
+                  String(
+                    item.display_place ||
+                    addressObject.name ||
+                    addressObject.amenity ||
+                    addressObject.shop ||
+                    addressObject.tourism ||
+                    addressObject.road ||
+                    item.display_name ||
+                    "Lokasi umum"
+                  ).trim();
 
-                    return {
+                const address =
+                  String(
+                    item.display_address ||
+                    item.display_name ||
+                    [
+                      addressObject.road,
+                      addressObject.city,
+                      addressObject.state,
+                      addressObject.country
+                    ]
+                      .filter(Boolean)
+                      .join(", ") ||
+                    ""
+                  ).trim();
 
-                      type:
-                        "external",
+                return {
 
-                      key:
-                        String(
-                          item.place_id ??
-                          `${item.lat},${item.lon},${title}`
-                        ),
+                  type:
+                    "external",
 
-                      title,
+                  key:
+                    String(
+                      item.place_id ??
+                      `${item.lat},${item.lon},${title}`
+                    ),
 
-                      meta:
-                        address ||
-                        "Lokasi umum",
+                  title,
 
-                      icon:
-                        "●",
+                  meta:
+                    address ||
+                    "Lokasi umum",
 
-                      external:
-                        item
+                  icon:
+                    "●",
 
-                    };
+                  external:
+                    item
 
-                  }
-                )
-            : [];
+                };
+
+              }
+            );
+
+        locationIqError =
+          "";
 
       } catch (error) {
 
         if (
-          error?.name !==
+          error?.name ===
           "AbortError"
         ) {
 
-          console.error(
-            "Gagal mencari lokasi umum via LocationIQ:",
-            error
-          );
+          return;
+
+        }
+
+        console.error(
+          "Gagal mencari lokasi umum via LocationIQ:",
+          error
+        );
+
+        if (
+          error?.message?.includes(
+            "HTTP 401"
+          )
+        ) {
+
+          locationIqError =
+            "Token LocationIQ ditolak (401).";
+
+        } else if (
+          error?.message?.includes(
+            "HTTP 403"
+          )
+        ) {
+
+          locationIqError =
+            "Akses LocationIQ ditolak (403). Cek HTTP Referrer.";
+
+        } else if (
+          error?.message?.includes(
+            "HTTP 429"
+          )
+        ) {
+
+          locationIqError =
+            "Batas permintaan LocationIQ sedang tercapai.";
+
+        } else {
+
+          locationIqError =
+            "Pencarian lokasi umum gagal terhubung ke LocationIQ.";
 
         }
 
@@ -6619,6 +6773,9 @@
 
       locationIqLoading =
         false;
+
+      locationIqError =
+        "";
 
     }
 
@@ -7043,6 +7200,7 @@
           "sidebar-search-empty";
 
         empty.textContent =
+          locationIqError ||
           "Lokasi atau data tidak ditemukan.";
 
         sidebarSearchResults.appendChild(
@@ -7348,12 +7506,16 @@
 
     }
 
-    /* PENCARIAN INTERNAL REALTIME
-       Sumber:
+    /* PENCARIAN SIDEBAR REALTIME
+       Internal:
        - Kecamatan dari kecamatan.geojson
        - Lokasi penting dari konfigurasi aplikasi
        - Data pelanggaran dari dataset aktif
-       Belum menggunakan API lokasi eksternal. */
+
+       External:
+       - LocationIQ Autocomplete
+       - Fallback LocationIQ Search / Forward Geocoding
+       Fokus hasil pada Kabupaten Kuantan Singingi. */
     sidebarSearchInput.addEventListener(
       "input",
       () => {
