@@ -1818,7 +1818,7 @@
        POPUP DATA PELANGGARAN
        Format:
        Foto dokumentasi
-       Jenis Pelanggaran
+       Kategori Ketertiban
        Tanggal
        Lokasi
        Kejadian
@@ -3898,11 +3898,11 @@
         <div class="modal-title-group">
 
           <h2 id="dataset-modal-title">
-            Jelajahi Data Pelanggaran Trantibum
+            Jelajahi Data Trantibum
           </h2>
 
           <p>
-            Pilih tahun, bulan dan kecamatan untuk menampilkan data pelanggaran Trantibum.
+            Pilih tahun, bulan dan kecamatan untuk menampilkan data Trantibum yang memuat temuan atau indikasi permasalahan ketenteraman dan ketertiban umum.
           </p>
 
         </div>
@@ -3922,7 +3922,9 @@
 
         <div class="modal-info">
           Dataset yang dipilih akan menjadi dataset aktif pada sidebar dan
-          ditampilkan pada peta.
+          ditampilkan pada peta. Data yang tampil dibatasi pada data Trantibum
+          yang memuat temuan atau indikasi permasalahan ketertiban dan
+          ketenteraman masyarakat.
         </div>
 
         <!-- TAHUN -->
@@ -3932,7 +3934,7 @@
             class="field-label"
             for="dataset-year"
           >
-            Tahun Pelanggaran
+            Tahun Data
             <span class="field-required">*</span>
           </label>
 
@@ -3954,7 +3956,7 @@
             class="field-label"
             for="dataset-month"
           >
-            Bulan Pelanggaran
+            Bulan Data
           </label>
 
           <select
@@ -4545,7 +4547,7 @@
 
     <div class="recap-panel-body">
       <div class="recap-mobile-note">
-        Ketuk nama <strong>Lokasi</strong> untuk langsung menuju titik pelanggaran pada peta.
+        Ketuk nama <strong>Lokasi</strong> untuk langsung menuju titik data Trantibum pada peta.
       </div>
 
       <div id="recap-empty" class="recap-empty">
@@ -4554,7 +4556,7 @@
 
       <div id="recap-table" class="recap-table">
         <div class="recap-table-head">
-          <div class="recap-head-cell">Jenis Pelanggaran</div>
+          <div class="recap-head-cell">Kategori Ketertiban</div>
           <div class="recap-head-cell">Tanggal</div>
           <div class="recap-head-cell">Lokasi</div>
           <div class="recap-head-cell">Kejadian</div>
@@ -7123,7 +7125,7 @@
 
       }
 
-      /* DATA PELANGGARAN — mengikuti dataset aktif */
+      /* DATA TRANTIBUM — mengikuti dataset aktif */
       if (activeDataset) {
 
         const datasetData =
@@ -7441,7 +7443,7 @@
         Semua hasil dari data internal:
         - Kecamatan
         - Lokasi Penting
-        - Pelanggaran
+        - Data Trantibum
       */
       appendSection(
         "DATA TRANTIBUM",
@@ -7646,7 +7648,7 @@
        Internal:
        - Kecamatan dari kecamatan.geojson
        - Lokasi penting dari konfigurasi aplikasi
-       - Data pelanggaran dari dataset aktif
+       - Data Trantibum dari dataset aktif
 
        External:
        - LocationIQ Autocomplete
@@ -7761,6 +7763,24 @@
 
       return pelanggaranData.filter(
         item => {
+
+          /*
+            Trantibum Map hanya menampilkan data yang sudah memiliki
+            salah satu dari 13 kategori ketertiban. Data operasional
+            tanpa temuan/indikasi permasalahan tidak ditampilkan pada peta.
+          */
+          const categoryKey =
+            getCategory(item);
+
+          if (
+            !CATEGORIES.some(
+              category => category.key === categoryKey
+            )
+          ) {
+
+            return false;
+
+          }
 
           const itemYear =
             getYear(item);
@@ -8145,7 +8165,7 @@
 
             <div class="popup-row">
               <div class="popup-label">
-                Jenis Pelanggaran
+                Kategori Ketertiban
               </div>
 
               <div class="popup-value">
@@ -8645,7 +8665,7 @@
 
         recapTable.style.display = "none";
         recapEmpty.textContent =
-          "Tidak ada data pelanggaran pada dataset yang dipilih.";
+          "Tidak ada data Trantibum pada dataset yang dipilih.";
         recapEmpty.classList.add("show");
         return;
 
@@ -8681,7 +8701,7 @@
 
         const cells = [
           {
-            label: "Jenis Pelanggaran",
+            label: "Kategori Ketertiban",
             className: "recap-category",
             value: recapCategoryName(categoryKey)
           },
@@ -8727,7 +8747,7 @@
             button.className =
               "recap-location-button";
             button.title =
-              "Tampilkan lokasi pada peta";
+              "Tampilkan lokasi data pada peta";
 
             const icon =
               document.createElementNS(
@@ -8829,7 +8849,7 @@
         String(itemId ?? "");
 
       if (!key) {
-        showToast("Data pelanggaran tidak memiliki ID.");
+        showToast("Data Trantibum tidak memiliki ID.");
         return;
       }
 
@@ -8838,7 +8858,7 @@
 
       if (!entry) {
         showToast(
-          "Titik pelanggaran belum tersedia pada layer yang tampil."
+          "Titik data Trantibum belum tersedia pada layer yang tampil."
         );
         return;
       }
@@ -8862,7 +8882,7 @@
           recapMarkerRegistry.get(key);
 
         showToast(
-          `Layer ${entry?.category?.name || "pelanggaran"} diaktifkan untuk menampilkan lokasi.`
+          `Layer ${entry?.category?.name || "data Trantibum"} diaktifkan untuk menampilkan lokasi.`
         );
 
       }
@@ -9026,7 +9046,7 @@
       } catch (error) {
 
         console.warn(
-          "Gagal memusatkan data pelanggaran:",
+          "Gagal memusatkan data Trantibum:",
           error
         );
 
