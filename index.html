@@ -2001,6 +2001,13 @@
       overflow-wrap: anywhere;
     }
 
+    .popup-data-touch-area {
+      touch-action: pan-y;
+      user-select: none;
+      -webkit-user-select: none;
+      -webkit-touch-callout: none;
+    }
+
     .popup-carousel {
       display: flex;
       touch-action: pan-y;
@@ -8213,15 +8220,28 @@
 
     }
 
-    function getPelanggaranKejadian(item) {
+    function getPelanggaranLaporan(item) {
 
       return (
+        item.laporan ??
+        item.Laporan ??
+        item.LAPORAN ??
         item.kejadian ??
         item.uraian ??
         item.deskripsi ??
-        item.keterangan ??
         "-"
       );
+
+    }
+
+    /*
+      Kompatibilitas dengan bagian lama aplikasi.
+      Semua referensi lama yang masih meminta "kejadian"
+      akan membaca field "laporan" dari JSON baru.
+    */
+    function getPelanggaranKejadian(item) {
+
+      return getPelanggaranLaporan(item);
 
     }
 
@@ -8231,6 +8251,32 @@
         item.tindak_lanjut ??
         item.tindakan ??
         item.follow_up ??
+        item.TindakLanjut ??
+        "-"
+      );
+
+    }
+
+    function getPelanggaranKeterangan(item) {
+
+      return (
+        item.keterangan ??
+        item.Keterangan ??
+        item.status_keterangan ??
+        item.status ??
+        "-"
+      );
+
+    }
+
+    function getPelanggaranJenisKegiatan(item) {
+
+      return (
+        item.jenis_kegiatan ??
+        item.JenisKegiatan ??
+        item.JENIS_KEGIATAN ??
+        item.jenisKegiatan ??
+        item.perihal ??
         "-"
       );
 
@@ -8299,7 +8345,7 @@
                 photoCount > 1
                   ? `
                     <div class="popup-photo-counter">
-                      <span data-photo-counter>1 / ${photoCount}</span>
+                      <span data-photo-counter>Foto 1 / ${photoCount}</span>
                     </div>
                   `
                   : ""
@@ -8351,7 +8397,7 @@
 
             <div class="popup-row">
               <div class="popup-label">
-                Kategori Ketertiban
+                Kategori
               </div>
 
               <div class="popup-value">
@@ -8385,12 +8431,12 @@
 
             <div class="popup-row">
               <div class="popup-label">
-                Kejadian
+                Laporan
               </div>
 
               <div class="popup-value">
                 ${escapeHtml(
-                  getPelanggaranKejadian(item)
+                  getPelanggaranLaporan(item)
                 )}
               </div>
             </div>
@@ -8403,6 +8449,30 @@
               <div class="popup-value">
                 ${escapeHtml(
                   getPelanggaranTindakLanjut(item)
+                )}
+              </div>
+            </div>
+
+            <div class="popup-row">
+              <div class="popup-label">
+                Keterangan
+              </div>
+
+              <div class="popup-value">
+                ${escapeHtml(
+                  getPelanggaranKeterangan(item)
+                )}
+              </div>
+            </div>
+
+            <div class="popup-row">
+              <div class="popup-label">
+                Jenis Kegiatan
+              </div>
+
+              <div class="popup-value">
+                ${escapeHtml(
+                  getPelanggaranJenisKegiatan(item)
                 )}
               </div>
             </div>
@@ -8448,7 +8518,7 @@
 
           <div class="popup-carousel-counter">
 
-            ${currentIndex + 1} / ${total}
+            Data ${currentIndex + 1} / ${total}
 
             <div class="popup-carousel-dots">
               ${Array.from(
@@ -8846,7 +8916,7 @@
           photoCarousel.querySelector('[data-photo-counter]');
 
         if (counter) {
-          counter.textContent = `${currentIndex + 1} / ${total}`;
+          counter.textContent = `Foto ${currentIndex + 1} / ${total}`;
         }
 
         photoCarousel.querySelectorAll('[data-photo-dot]').forEach(dot => {
