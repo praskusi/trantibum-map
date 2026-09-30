@@ -1859,6 +1859,94 @@
       border-bottom: 1px solid #e5e0d7;
     }
 
+    .popup-photo-carousel {
+      position: relative;
+      width: 100%;
+      touch-action: pan-y;
+      user-select: none;
+      -webkit-user-select: none;
+      -webkit-touch-callout: none;
+    }
+
+    .popup-photo-carousel .popup-photo-wrap {
+      position: relative;
+      border-bottom: none;
+    }
+
+    .popup-photo-button {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 2;
+
+      width: 30px;
+      height: 34px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+
+      padding: 0;
+      border: 1px solid rgba(255,255,255,0.75);
+      border-radius: 7px;
+      background: rgba(255,255,255,0.88);
+      color: var(--dark-olive);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.16);
+      font-size: 20px;
+      line-height: 1;
+      cursor: pointer;
+      transition: background 0.15s ease, transform 0.15s ease;
+    }
+
+    .popup-photo-button:hover {
+      background: #ffffff;
+    }
+
+    .popup-photo-button:active {
+      transform: translateY(-50%) scale(0.96);
+    }
+
+    .popup-photo-prev { left: 8px; }
+    .popup-photo-next { right: 8px; }
+
+    .popup-photo-counter {
+      position: absolute;
+      left: 50%;
+      bottom: 8px;
+      z-index: 2;
+      transform: translateX(-50%);
+
+      padding: 3px 8px;
+      border-radius: 10px;
+      background: rgba(0,0,0,0.48);
+      color: #ffffff;
+      font-size: 9px;
+      font-weight: 800;
+      line-height: 1.2;
+      pointer-events: none;
+    }
+
+    .popup-photo-dots {
+      display: flex;
+      justify-content: center;
+      gap: 4px;
+      padding: 6px 0 7px;
+      background: #faf9f6;
+      border-bottom: 1px solid #e5e0d7;
+    }
+
+    .popup-photo-dot {
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: #d2cdc2;
+    }
+
+    .popup-photo-dot.active {
+      background: var(--dark-olive);
+      transform: scale(1.15);
+    }
+
+
     .popup-photo {
       width: 100%;
       height: 185px;
@@ -1915,6 +2003,9 @@
 
     .popup-carousel {
       display: flex;
+      touch-action: pan-y;
+      user-select: none;
+      -webkit-user-select: none;
       align-items: center;
       justify-content: space-between;
       gap: 10px;
@@ -7895,14 +7986,31 @@
       return escapeHtml(value);
     }
 
-    function getPelanggaranPhoto(item) {
+    function getPelanggaranPhotos(item) {
 
-      return String(
+      const raw =
         item.foto ??
         item.photo ??
         item.dokumentasi ??
-        ""
-      ).trim();
+        [];
+
+      if (Array.isArray(raw)) {
+        return raw
+          .map(photo => String(photo ?? "").trim())
+          .filter(Boolean);
+      }
+
+      const single = String(raw).trim();
+
+      return single
+        ? [single]
+        : [];
+
+    }
+
+    function getPelanggaranPhoto(item) {
+
+      return getPelanggaranPhotos(item)[0] ?? "";
 
     }
 
@@ -8130,38 +8238,116 @@
 
     function createPopupDetails(item, category) {
 
-      const foto =
-        getPelanggaranPhoto(item);
+      const photos =
+        getPelanggaranPhotos(item);
 
-      const fotoHtml =
-        foto
-          ? `
+      const photoCount =
+        photos.length;
+
+      const firstPhoto =
+        photos[0] ?? "";
+
+      let fotoHtml = "";
+
+      if (firstPhoto) {
+
+        fotoHtml = `
+          <div
+            class="popup-photo-carousel"
+            data-photo-index="0"
+            data-photo-total="${photoCount}"
+            data-photo-urls="${escapeAttribute(JSON.stringify(photos))}"
+          >
+
             <div class="popup-photo-wrap">
+
               <img
                 class="popup-photo"
-                src="${escapeAttribute(foto)}"
+                src="${escapeAttribute(firstPhoto)}"
                 alt="Foto dokumentasi ${escapeAttribute(category.name)}"
+                data-photo-image
+                draggable="false"
                 onerror="
                   this.parentElement.innerHTML =
                   '<div class=&quot;popup-photo-missing&quot;>Foto dokumentasi tidak dapat ditampilkan.</div>';
                 "
               >
+
+              ${
+                photoCount > 1
+                  ? `
+                    <button
+                      type="button"
+                      class="popup-photo-button popup-photo-prev"
+                      data-photo-action="prev"
+                      aria-label="Foto sebelumnya"
+                      title="Foto sebelumnya"
+                    >‹</button>
+
+                    <button
+                      type="button"
+                      class="popup-photo-button popup-photo-next"
+                      data-photo-action="next"
+                      aria-label="Foto berikutnya"
+                      title="Foto berikutnya"
+                    >›</button>
+                  `
+                  : ""
+              }
+
+              ${
+                photoCount > 1
+                  ? `
+                    <div class="popup-photo-counter">
+                      <span data-photo-counter>1 / ${photoCount}</span>
+                    </div>
+                  `
+                  : ""
+              }
+
             </div>
-          `
-          : `
+
+            ${
+              photoCount > 1
+                ? `
+                  <div class="popup-photo-dots" aria-hidden="true">
+                    ${Array.from(
+                      { length: photoCount },
+                      (_, index) => `
+                        <span
+                          class="popup-photo-dot ${index === 0 ? "active" : ""}"
+                          data-photo-dot="${index}"
+                        ></span>
+                      `
+                    ).join("")}
+                  </div>
+                `
+                : ""
+            }
+
+          </div>
+        `;
+
+      } else {
+
+        fotoHtml = `
+          <div class="popup-photo-carousel">
             <div class="popup-photo-wrap">
               <div class="popup-photo-missing">
                 Foto dokumentasi belum tersedia.
               </div>
             </div>
-          `;
+          </div>
+        `;
+
+      }
 
       return `
         <div class="popup-box">
 
           ${fotoHtml}
 
-          <div class="popup-details">
+          <div class="popup-details popup-data-touch-area">
 
             <div class="popup-row">
               <div class="popup-label">
@@ -8248,7 +8434,7 @@
       return `
         ${basicContent}
 
-        <div class="popup-carousel">
+        <div class="popup-carousel popup-data-carousel" data-data-carousel>
 
           <button
             type="button"
@@ -8467,130 +8653,240 @@
       currentIndex
     ) {
 
-      if (
-        group.items.length <= 1
-      ) {
-        return;
-      }
-
-      const popup =
-        marker.getPopup();
+      const popup = marker.getPopup();
 
       if (!popup) {
         return;
       }
 
-      const popupElement =
-        popup.getElement();
+      const popupElement = popup.getElement();
 
       if (!popupElement) {
         return;
       }
 
-      const prevButton =
-        popupElement.querySelector(
-          '[data-carousel-action="prev"]'
+      const goToData = nextIndex => {
+
+        marker.setPopupContent(
+          createPopupCarouselContent(
+            group.items[nextIndex],
+            category,
+            nextIndex,
+            group.items.length
+          )
         );
 
-      const nextButton =
-        popupElement.querySelector(
-          '[data-carousel-action="next"]'
-        );
+        setTimeout(() => {
+          attachPelanggaranCarousel(
+            marker,
+            group,
+            category,
+            nextIndex
+          );
+        }, 0);
 
-      if (prevButton) {
+      };
 
-        prevButton.addEventListener(
-          "click",
-          event => {
+      if (group.items.length > 1) {
 
+        const prevButton =
+          popupElement.querySelector(
+            '[data-carousel-action="prev"]'
+          );
+
+        const nextButton =
+          popupElement.querySelector(
+            '[data-carousel-action="next"]'
+          );
+
+        if (prevButton) {
+          prevButton.addEventListener('click', event => {
             event.preventDefault();
             event.stopPropagation();
 
             const nextIndex =
-              (
-                currentIndex -
-                1 +
-                group.items.length
-              ) %
-              group.items.length;
+              (currentIndex - 1 + group.items.length) % group.items.length;
 
-            marker.setPopupContent(
-              createPopupCarouselContent(
-                group.items[
-                  nextIndex
-                ],
-                category,
-                nextIndex,
-                group.items.length
-              )
-            );
+            goToData(nextIndex);
+          });
+        }
 
-            setTimeout(
-              () => {
+        if (nextButton) {
+          nextButton.addEventListener('click', event => {
+            event.preventDefault();
+            event.stopPropagation();
 
-                attachPelanggaranCarousel(
-                  marker,
-                  group,
-                  category,
-                  nextIndex
-                );
+            const nextIndex =
+              (currentIndex + 1) % group.items.length;
 
-              },
-              0
-            );
+            goToData(nextIndex);
+          });
+        }
 
-          }
-        );
+        const dataTouchArea =
+          popupElement.querySelector('.popup-data-touch-area');
 
+        if (dataTouchArea) {
+          attachSwipeGesture(
+            dataTouchArea,
+            () => {
+              const nextIndex =
+                (currentIndex - 1 + group.items.length) % group.items.length;
+              goToData(nextIndex);
+            },
+            () => {
+              const nextIndex =
+                (currentIndex + 1) % group.items.length;
+              goToData(nextIndex);
+            }
+          );
+        }
+
+      }
+
+      attachPhotoCarousel(popupElement);
+
+    }
+
+    function attachSwipeGesture(element, onSwipeLeft, onSwipeRight) {
+
+      let startX = 0;
+      let startY = 0;
+      let startTime = 0;
+
+      element.addEventListener('touchstart', event => {
+
+        if (!event.touches || event.touches.length !== 1) {
+          return;
+        }
+
+        const touch = event.touches[0];
+
+        startX = touch.clientX;
+        startY = touch.clientY;
+        startTime = Date.now();
+
+      }, { passive: true });
+
+      element.addEventListener('touchend', event => {
+
+        if (!event.changedTouches || event.changedTouches.length !== 1) {
+          return;
+        }
+
+        const touch = event.changedTouches[0];
+        const deltaX = touch.clientX - startX;
+        const deltaY = touch.clientY - startY;
+        const elapsed = Date.now() - startTime;
+
+        if (
+          Math.abs(deltaX) < 45 ||
+          Math.abs(deltaX) <= Math.abs(deltaY) * 1.2 ||
+          elapsed > 900
+        ) {
+          return;
+        }
+
+        if (deltaX < 0) {
+          onSwipeLeft();
+        } else {
+          onSwipeRight();
+        }
+
+      }, { passive: true });
+
+    }
+
+    function attachPhotoCarousel(popupElement) {
+
+      const photoCarousel =
+        popupElement.querySelector('.popup-photo-carousel[data-photo-total]');
+
+      if (!photoCarousel) {
+        return;
+      }
+
+      const total =
+        Number(photoCarousel.dataset.photoTotal || 0);
+
+      if (total <= 1) {
+        return;
+      }
+
+      let currentIndex =
+        Number(photoCarousel.dataset.photoIndex || 0);
+
+      if (!photoCarousel.dataset.photoUrls) {
+        return;
+      }
+
+      const photoUrls = JSON.parse(
+        photoCarousel.dataset.photoUrls
+      );
+
+      photoCarousel._photoUrls = photoUrls;
+
+      const getPhoto = index =>
+        photoCarousel._photoUrls[index] || '';
+
+      const updatePhotoSafe = nextIndex => {
+        currentIndex =
+          (nextIndex + total) % total;
+
+        photoCarousel.dataset.photoIndex = String(currentIndex);
+
+        const image =
+          photoCarousel.querySelector('[data-photo-image]');
+
+        if (image) {
+          image.src = getPhoto(currentIndex);
+        }
+
+        const counter =
+          photoCarousel.querySelector('[data-photo-counter]');
+
+        if (counter) {
+          counter.textContent = `${currentIndex + 1} / ${total}`;
+        }
+
+        photoCarousel.querySelectorAll('[data-photo-dot]').forEach(dot => {
+          dot.classList.toggle(
+            'active',
+            Number(dot.dataset.photoDot) === currentIndex
+          );
+        });
+      };
+
+      const prevButton =
+        photoCarousel.querySelector('[data-photo-action="prev"]');
+
+      const nextButton =
+        photoCarousel.querySelector('[data-photo-action="next"]');
+
+      if (prevButton) {
+        prevButton.addEventListener('click', event => {
+          event.preventDefault();
+          event.stopPropagation();
+          updatePhotoSafe(currentIndex - 1);
+        });
       }
 
       if (nextButton) {
-
-        nextButton.addEventListener(
-          "click",
-          event => {
-
-            event.preventDefault();
-            event.stopPropagation();
-
-            const nextIndex =
-              (
-                currentIndex +
-                1
-              ) %
-              group.items.length;
-
-            marker.setPopupContent(
-              createPopupCarouselContent(
-                group.items[
-                  nextIndex
-                ],
-                category,
-                nextIndex,
-                group.items.length
-              )
-            );
-
-            setTimeout(
-              () => {
-
-                attachPelanggaranCarousel(
-                  marker,
-                  group,
-                  category,
-                  nextIndex
-                );
-
-              },
-              0
-            );
-
-          }
-        );
-
+        nextButton.addEventListener('click', event => {
+          event.preventDefault();
+          event.stopPropagation();
+          updatePhotoSafe(currentIndex + 1);
+        });
       }
 
+      attachSwipeGesture(
+        photoCarousel,
+        () => updatePhotoSafe(currentIndex + 1),
+        () => updatePhotoSafe(currentIndex - 1)
+      );
+
     }
+
 
     /* =========================================================
        REKAP DATA
