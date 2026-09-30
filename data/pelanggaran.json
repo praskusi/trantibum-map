@@ -1,39 +1,62 @@
 [
   {
-    "id": "TBM-2026-001",
+    "kategori": "Tertib Bangunan",
+    "tanggal": "20 Januari 2026",
+    "lokasi": "Kawasan Pasar Bawah, Kelurahan Pasar",
+    "laporan": "Pengamanan relokasi dan pembongkaran bangunan Pasar Bawah",
+    "tindak_lanjut": "Pengamanan dan pengaturan area pembongkaran, pengaturan arus lalu lintas, pengawasan hingga kegiatan selesai",
+    "keterangan": "Aman, tertib, dan kondusif; tidak ada penolakan masyarakat",
+    "jenis_kegiatan": "Pengamanan",
+    "id": "TBM-2026-021",
     "tahun": 2026,
     "bulan": 1,
-    "kategori": "Tertib Sosial",
-    "tanggal": "01 Januari 2026",
-    "lokasi": "Taman Pemda Kuantan Singingi",
     "kecamatan": "KUANTAN TENGAH",
-    "kejadian": "Ditemukan beberapa pasangan muda-mudi di tempat-tempat sepi",
-    "tindak_lanjut": "Teguran agar tidak melakukan perbuatan yang melanggar norma dan etika; pasangan diminta bubar",
-    "status_keterangan": "Situasi aman dan terkendali",
-    "jenis_kegiatan": "Patroli Siaga Trantibum",
-    "latitude": -0.508634,
-    "longitude": 101.537574,
+    "latitude": -0.532112,
+    "longitude": 101.572521,
     "foto": [
-      "img/pelanggaran/TBM-2026-001-01.jpeg",
-      "img/pelanggaran/TBM-2026-001-02.jpeg"
+      "img/pelanggaran/TBM-2026-021-01.jpeg",
+      "img/pelanggaran/TBM-2026-021-02.jpeg"
     ],
     "foto_nama": [
-      "TBM-2026-001-01",
-      "TBM-2026-001-02"
+      "TBM-2026-021-01.jpeg",
+      "TBM-2026-021-02.jpeg"
     ]
   },
   {
-    "id": "TBM-2026-002",
+    "kategori": "Tertib Bangunan",
+    "tanggal": "21 Januari 2026",
+    "lokasi": "Kawasan Pasar Bawah, Kelurahan Pasar",
+    "laporan": "Pembongkaran/relokasi lanjutan Kios Pasar Bawah",
+    "tindak_lanjut": "Penempatan personel, pendampingan pedagang, pengamanan area/barang, koordinasi lintas instansi",
+    "keterangan": "Pedagang kooperatif; tidak terdapat penolakan/protes/tindakan anarkis; kegiatan kondusif, aman dan lancar",
+    "jenis_kegiatan": "Pengamanan",
+    "id": "TBM-2026-022",
     "tahun": 2026,
     "bulan": 1,
+    "kecamatan": "KUANTAN TENGAH",
+    "latitude": -0.532112,
+    "longitude": 101.572521,
+    "foto": [
+      "img/pelanggaran/TBM-2026-022-01.jpeg",
+      "img/pelanggaran/TBM-2026-022-02.jpeg"
+    ],
+    "foto_nama": [
+      "TBM-2026-022-01.jpeg",
+      "TBM-2026-022-02.jpeg"
+    ]
+  },
+  {
     "kategori": "Tertib Jalan",
     "tanggal": "03 Januari 2026",
     "lokasi": "Komplek Perkantoran Pemda Kuantan Singingi",
-    "kecamatan": "KUANTAN TENGAH",
-    "kejadian": "Beberapa kelompok remaja terindikasi akan melaksanakan aktivitas balap liar",
+    "laporan": "Beberapa kelompok remaja terindikasi akan melaksanakan aktivitas balap liar",
     "tindak_lanjut": "Pendekatan edukatif dan humanis; imbauan; kelompok remaja diminta bubar",
-    "status_keterangan": "Pencegahan gangguan; situasi aman dan terkendali",
+    "keterangan": "Pencegahan gangguan; situasi aman dan terkendali",
     "jenis_kegiatan": "Patroli Siaga Trantibum",
+    "id": "TBM-2026-002",
+    "tahun": 2026,
+    "bulan": 1,
+    "kecamatan": "KUANTAN TENGAH",
     "latitude": -0.505988,
     "longitude": 101.537653,
     "foto": [
@@ -41,22 +64,22 @@
       "img/pelanggaran/TBM-2026-002-02.jpeg"
     ],
     "foto_nama": [
-      "TBM-2026-002-01",
-      "TBM-2026-002-02"
+      "TBM-2026-002-01.jpeg",
+      "TBM-2026-002-02.jpeg"
     ]
   },
   {
-    "id": "TBM-2026-003",
-    "tahun": 2026,
-    "bulan": 1,
     "kategori": "Tertib Jalan",
     "tanggal": "04 Januari 2026",
     "lokasi": "Komplek Perkantoran Pemda Kuantan Singingi",
-    "kecamatan": "KUANTAN TENGAH",
-    "kejadian": "Patroli pada ruas jalan rawan aktivitas balap liar",
+    "laporan": "Patroli pada ruas jalan rawan aktivitas balap liar",
     "tindak_lanjut": "Penjagaan dan pencegahan pada ruas jalan rawan",
-    "status_keterangan": "Aktivitas berpotensi mengganggu ketertiban sudah jauh berkurang; aman dan terkendali",
+    "keterangan": "Aktivitas berpotensi mengganggu ketertiban sudah jauh berkurang; aman dan terkendali",
     "jenis_kegiatan": "Patroli Siaga Trantibum",
+    "id": "TBM-2026-003",
+    "tahun": 2026,
+    "bulan": 1,
+    "kecamatan": "KUANTAN TENGAH",
     "latitude": -0.505988,
     "longitude": 101.537653,
     "foto": [
@@ -64,66 +87,471 @@
       "img/pelanggaran/TBM-2026-003-02.jpeg"
     ],
     "foto_nama": [
-      "TBM-2026-003-01",
-      "TBM-2026-003-02"
+      "TBM-2026-003-01.jpeg",
+      "TBM-2026-003-02.jpeg"
     ]
   },
   {
-    "id": "TBM-2026-004",
-    "tahun": 2026,
-    "bulan": 1,
-    "kategori": "Tertib Peran Serta Masyarakat",
-    "tanggal": "06 Januari 2026",
-    "lokasi": "Ruang Hearing, Kantor DPRD Kab. Kuantan Singingi",
-    "kecamatan": "KUANTAN TENGAH",
-    "kejadian": "Hearing rencana pembongkaran/relokasi kios Pasar Bawah",
-    "tindak_lanjut": "Pembahasan relokasi; disepakati pembongkaran dilakukan 15 Januari 2026; penilaian aset melalui penilai independen",
-    "status_keterangan": "Hearing berlangsung tertib dan kondusif",
-    "jenis_kegiatan": "Pengamanan",
-    "latitude": -0.507661,
-    "longitude": 101.535176,
-    "foto": [
-      "img/pelanggaran/TBM-2026-004-01.jpeg",
-      "img/pelanggaran/TBM-2026-004-02.jpeg"
-    ],
-    "foto_nama": [
-      "TBM-2026-004-01",
-      "TBM-2026-004-02"
-    ]
-  },
-  {
-    "id": "TBM-2026-005",
-    "tahun": 2026,
-    "bulan": 1,
     "kategori": "Tertib Jalan",
     "tanggal": "06 Januari 2026",
     "lokasi": "Jalan Sport Center",
-    "kecamatan": "KUANTAN TENGAH",
-    "kejadian": "Pemantauan ruas jalan yang rawan kerumunan balap liar",
+    "laporan": "Pemantauan ruas jalan yang rawan kerumunan balap liar",
     "tindak_lanjut": "Patroli, penjagaan, dan penyisiran area",
-    "status_keterangan": "Tidak ditemukan aktivitas yang mengganggu ketertiban pada saat pemeriksaan; aman dan terkendali",
+    "keterangan": "Tidak ditemukan aktivitas yang mengganggu ketertiban pada saat pemeriksaan; aman dan terkendali",
     "jenis_kegiatan": "Patroli Siaga Trantibum",
+    "id": "TBM-2026-005",
+    "tahun": 2026,
+    "bulan": 1,
+    "kecamatan": "KUANTAN TENGAH",
     "latitude": -0.524742,
     "longitude": 101.53081,
     "foto": [
       "img/pelanggaran/TBM-2026-005.jpeg"
     ],
     "foto_nama": [
-      "TBM-2026-005"
+      "TBM-2026-005.jpeg"
     ]
   },
   {
-    "id": "TBM-2026-006",
+    "kategori": "Tertib Jalan",
+    "tanggal": "09 Januari 2026",
+    "lokasi": "Komplek Perkantoran Pemda Kuantan Singingi",
+    "laporan": "Pencegahan aktivitas balap liar pada jalur dua depan Kantor Bupati",
+    "tindak_lanjut": "Penjagaan; imbauan dan teguran edukatif/humanis kepada kelompok remaja",
+    "keterangan": "Pencegahan; aman dan terkendali",
+    "jenis_kegiatan": "Patroli Siaga Trantibum",
+    "id": "TBM-2026-007",
     "tahun": 2026,
     "bulan": 1,
+    "kecamatan": "KUANTAN TENGAH",
+    "latitude": -0.505988,
+    "longitude": 101.537653,
+    "foto": [
+      "img/pelanggaran/TBM-2026-007-01.jpeg",
+      "img/pelanggaran/TBM-2026-007-02.jpeg"
+    ],
+    "foto_nama": [
+      "TBM-2026-007-01.jpeg",
+      "TBM-2026-007-02.jpeg"
+    ]
+  },
+  {
+    "kategori": "Tertib Jalan",
+    "tanggal": "10 Januari 2026",
+    "lokasi": "Komplek Perkantoran Pemda Kuantan Singingi",
+    "laporan": "Pencegahan aktivitas balap liar pada ruas jalan jalur dua depan Kantor Bupati",
+    "tindak_lanjut": "Penjagaan dan imbauan/teguran edukatif kepada kelompok remaja/geng motor",
+    "keterangan": "Aktivitas yang berpotensi mengganggu ketertiban dipantau; aman dan terkendali",
+    "jenis_kegiatan": "Patroli Siaga Trantibum",
+    "id": "TBM-2026-010",
+    "tahun": 2026,
+    "bulan": 1,
+    "kecamatan": "KUANTAN TENGAH",
+    "latitude": -0.505988,
+    "longitude": 101.537653,
+    "foto": [
+      "img/pelanggaran/TBM-2026-010-01.jpeg",
+      "img/pelanggaran/TBM-2026-010-02.jpeg"
+    ],
+    "foto_nama": [
+      "TBM-2026-010-01.jpeg",
+      "TBM-2026-010-02.jpeg"
+    ]
+  },
+  {
+    "kategori": "Tertib Jalan",
+    "tanggal": "12 Januari 2026",
+    "lokasi": "Komplek Perkantoran Pemda Kuantan Singingi",
+    "laporan": "Penjagaan pada beberapa ruas jalan yang kerap digunakan kelompok remaja/geng motor untuk balap liar",
+    "tindak_lanjut": "Patroli dan penjagaan sebagai pencegahan",
+    "keterangan": "Kondisi taman terpantau sepi; aman dan terkendali",
+    "jenis_kegiatan": "Patroli Siaga Trantibum",
+    "id": "TBM-2026-015",
+    "tahun": 2026,
+    "bulan": 1,
+    "kecamatan": "KUANTAN TENGAH",
+    "latitude": -0.505988,
+    "longitude": 101.537653,
+    "foto": [
+      "img/pelanggaran/TBM-2026-015-01.jpeg",
+      "img/pelanggaran/TBM-2026-015-02.jpeg"
+    ],
+    "foto_nama": [
+      "TBM-2026-015-01.jpeg",
+      "TBM-2026-015-02.jpeg"
+    ]
+  },
+  {
+    "kategori": "Tertib Jalan",
+    "tanggal": "19 Januari 2026",
+    "lokasi": "Komplek Perkantoran Pemda Kuantan Singingi",
+    "laporan": "Kerumunan remaja di depan Kantor Bupati dibubarkan sebagai antisipasi balap liar.",
+    "tindak_lanjut": "Pembubaran kerumunan",
+    "keterangan": "Aman dan terkendali",
+    "jenis_kegiatan": "Patroli Siaga Trantibum",
+    "id": "TBM-2026-019",
+    "tahun": 2026,
+    "bulan": 1,
+    "kecamatan": "KUANTAN TENGAH",
+    "latitude": -0.505988,
+    "longitude": 101.537653,
+    "foto": [
+      "img/pelanggaran/TBM-2026-019.jpeg"
+    ],
+    "foto_nama": [
+      "TBM-2026-019.jpeg"
+    ]
+  },
+  {
+    "kategori": "Tertib Jalan",
+    "tanggal": "24 Januari 2026",
+    "lokasi": "Komplek Perkantoran Pemda Kuantan Singingi (Bundaran Air Mancur)",
+    "laporan": "Remaja menggunakan kendaraan secara ugal-ugalan; kerumunan remaja dibubarkan",
+    "tindak_lanjut": "Penghalauan dan pembubaran kerumunan",
+    "keterangan": "Aman dan terkendali",
+    "jenis_kegiatan": "Patroli Siaga Trantibum",
+    "id": "TBM-2026-026",
+    "tahun": 2026,
+    "bulan": 1,
+    "kecamatan": "KUANTAN TENGAH",
+    "latitude": -0.509476,
+    "longitude": 101.536477,
+    "foto": [
+      "img/pelanggaran/TBM-2026-026-01.jpeg",
+      "img/pelanggaran/TBM-2026-026-02.jpeg"
+    ],
+    "foto_nama": [
+      "TBM-2026-026-01.jpeg",
+      "TBM-2026-026-02.jpeg"
+    ]
+  },
+  {
+    "kategori": "Tertib Jalan",
+    "tanggal": "25 Januari 2026",
+    "lokasi": "Komplek Perkantoran Pemda Kuantan Singingi",
+    "laporan": "Penjagaan pada beberapa ruas jalan untuk mencegah aksi balap liar",
+    "tindak_lanjut": "Penjagaan dan imbauan kepada kelompok remaja",
+    "keterangan": "Taman cukup ramai dan steril dari aktivitas pedagang; aman dan terkendali",
+    "jenis_kegiatan": "Patroli Siaga Trantibum",
+    "id": "TBM-2026-028",
+    "tahun": 2026,
+    "bulan": 1,
+    "kecamatan": "KUANTAN TENGAH",
+    "latitude": -0.505988,
+    "longitude": 101.537653,
+    "foto": [
+      "img/pelanggaran/TBM-2026-028.jpeg"
+    ],
+    "foto_nama": [
+      "TBM-2026-028.jpeg"
+    ]
+  },
+  {
+    "kategori": "Tertib Jalan",
+    "tanggal": "27 Januari 2026",
+    "lokasi": "Taman Pemda Kuantan Singingi",
+    "laporan": "Penjagaan beberapa ruas jalan untuk mencegah aksi balap liar.",
+    "tindak_lanjut": "Penjagaan; pencegahan",
+    "keterangan": "Aman dan terkendali",
+    "jenis_kegiatan": "Patroli Siaga Trantibum",
+    "id": "TBM-2026-031",
+    "tahun": 2026,
+    "bulan": 1,
+    "kecamatan": "KUANTAN TENGAH",
+    "latitude": -0.508634,
+    "longitude": 101.537574,
+    "foto": [
+      "img/pelanggaran/TBM-2026-031.jpeg"
+    ],
+    "foto_nama": [
+      "TBM-2026-031.jpeg"
+    ]
+  },
+  {
+    "kategori": "Tertib Jalan",
+    "tanggal": "29 Januari 2026",
+    "lokasi": "Komplek Perkantoran Pemda Kuansing (Bundaran Air mancur)",
+    "laporan": "Penjagaan di sekitar Bundaran Air Mancur untuk mengantisipasi kerumunan dan aksi balap liar.",
+    "tindak_lanjut": "Patroli dan penjagaan pencegahan",
+    "keterangan": "Situasi kondusif dan aman",
+    "jenis_kegiatan": "Patroli Siaga Trantibum",
+    "id": "TBM-2026-038",
+    "tahun": 2026,
+    "bulan": 1,
+    "kecamatan": "KUANTAN TENGAH",
+    "latitude": -0.509476,
+    "longitude": 101.536477,
+    "foto": [
+      "img/pelanggaran/TBM-2026-038.jpeg"
+    ],
+    "foto_nama": [
+      "TBM-2026-038.jpeg"
+    ]
+  },
+  {
+    "kategori": "Tertib Jalan",
+    "tanggal": "31 Januari 2026",
+    "lokasi": "Ruas jalan antara Taman Jalur dan Ex PT Ludin",
+    "laporan": "Pengamanan lalu lintas pada ruas jalan saat pekerjaan penimbunan tanah oleh PUPR berlangsung.",
+    "tindak_lanjut": "Pengamanan dan pengaturan lalu lintas",
+    "keterangan": "Lalu lintas ramai lancar; kegiatan aman dan terkendali",
+    "jenis_kegiatan": "Pengamanan",
+    "id": "TBM-2026-041",
+    "tahun": 2026,
+    "bulan": 1,
+    "kecamatan": "KUANTAN TENGAH",
+    "latitude": -0.532013,
+    "longitude": 101.571316,
+    "foto": [
+      "img/pelanggaran/TBM-2026-041.jpeg"
+    ],
+    "foto_nama": [
+      "TBM-2026-041.jpeg"
+    ]
+  },
+  {
+    "kategori": "Tertib Jalur Hijau, Taman dan Tempat Umum",
+    "tanggal": "09 Januari 2026",
+    "lokasi": "Taman Pemda Kuantan Singingi",
+    "laporan": "PKL berjualan di area Taman Pemda",
+    "tindak_lanjut": "Teguran agar tidak berjualan di lokasi tersebut",
+    "keterangan": "Aman dan terkendali",
+    "jenis_kegiatan": "Patroli Siaga Trantibum",
+    "id": "TBM-2026-009",
+    "tahun": 2026,
+    "bulan": 1,
+    "kecamatan": "KUANTAN TENGAH",
+    "latitude": -0.508554,
+    "longitude": 101.537772,
+    "foto": [
+      "img/pelanggaran/TBM-2026-009.jpeg"
+    ],
+    "foto_nama": [
+      "TBM-2026-009.jpeg"
+    ]
+  },
+  {
+    "kategori": "Tertib Jalur Hijau, Taman dan Tempat Umum",
+    "tanggal": "10 Januari 2026",
+    "lokasi": "Taman Pemda Kuantan Singingi",
+    "laporan": "PKL berjualan di area Taman Pemda yang merupakan area steril dari pedagang",
+    "tindak_lanjut": "Teguran agar tidak berjualan di lokasi tersebut",
+    "keterangan": "Aman dan terkendali",
+    "jenis_kegiatan": "Patroli Siaga Trantibum",
+    "id": "TBM-2026-011",
+    "tahun": 2026,
+    "bulan": 1,
+    "kecamatan": "KUANTAN TENGAH",
+    "latitude": -0.508554,
+    "longitude": 101.537772,
+    "foto": [
+      "img/pelanggaran/TBM-2026-011.jpeg"
+    ],
+    "foto_nama": [
+      "TBM-2026-011.jpeg"
+    ]
+  },
+  {
+    "kategori": "Tertib Jalur Hijau, Taman dan Tempat Umum",
+    "tanggal": "19 Januari 2026",
+    "lokasi": "Lapangan Pemda, Komplek Perkantoran Pemda Kuansing",
+    "laporan": "Pengunjung membawa kendaraan bermotor ke dalam area lapangan.",
+    "tindak_lanjut": "Teguran dan edukasi agar tidak membawa kendaraan bermotor ke area lapangan",
+    "keterangan": "Aman dan terkendali",
+    "jenis_kegiatan": "Patroli Siaga Trantibum",
+    "id": "TBM-2026-020",
+    "tahun": 2026,
+    "bulan": 1,
+    "kecamatan": "KUANTAN TENGAH",
+    "latitude": -0.50706,
+    "longitude": 101.537897,
+    "foto": [
+      "img/pelanggaran/TBM-2026-020.jpeg"
+    ],
+    "foto_nama": [
+      "TBM-2026-020.jpeg"
+    ]
+  },
+  {
+    "kategori": "Tertib Jalur Hijau, Taman dan Tempat Umum",
+    "tanggal": "22 Januari 2026",
+    "lokasi": "Taman Jalur, Kelurahan Pasar",
+    "laporan": "PKL berjualan di seputaran Taman Jalur dan Ex PT Ludin",
+    "tindak_lanjut": "Peninjauan, pemberian Surat Peringatan, imbauan untuk tidak berjualan mulai 22 Januari dan arahan ke Pasar Rakyat/modern",
+    "keterangan": "Situasi aman dan terkendali",
+    "jenis_kegiatan": "Sosialisasi",
+    "id": "TBM-2026-023",
+    "tahun": 2026,
+    "bulan": 1,
+    "kecamatan": "KUANTAN TENGAH",
+    "latitude": -0.532428,
+    "longitude": 101.57114,
+    "foto": [
+      "img/pelanggaran/TBM-2026-023.jpeg"
+    ],
+    "foto_nama": [
+      "TBM-2026-023.jpeg"
+    ]
+  },
+  {
+    "kategori": "Tertib Jalur Hijau, Taman dan Tempat Umum",
+    "tanggal": "23 Januari 2026",
+    "lokasi": "Taman Jalur, Kelurahan Pasar",
+    "laporan": "PKL berjualan di sekitar area Taman Jalur",
+    "tindak_lanjut": "Penertiban; sesuai instruksi pimpinan pedagang diberi izin berjualan selama 2 minggu",
+    "keterangan": "Situasi aman dan terkendali",
+    "jenis_kegiatan": "Penertiban",
+    "id": "TBM-2026-024",
+    "tahun": 2026,
+    "bulan": 1,
+    "kecamatan": "KUANTAN TENGAH",
+    "latitude": -0.532428,
+    "longitude": 101.57114,
+    "foto": [
+      "img/pelanggaran/TBM-2026-024.jpeg"
+    ],
+    "foto_nama": [
+      "TBM-2026-024.jpeg"
+    ]
+  },
+  {
+    "kategori": "Tertib Jalur Hijau, Taman dan Tempat Umum",
+    "tanggal": "24 Januari 2026",
+    "lokasi": "Area eks-kantor dinas tenaga kerja",
+    "laporan": "Fasilitas umum digunakan sebagai tempat parkir 3 gerobak PKL setelah berjualan",
+    "tindak_lanjut": "Koordinasi dengan koordinator pedagang agar pemilik gerobak memindahkan gerobak dari area tersebut",
+    "keterangan": "Situasi sekitar Taman Jalur terpantau ramai",
+    "jenis_kegiatan": "Patroli Siaga Trantibum",
+    "id": "TBM-2026-025",
+    "tahun": 2026,
+    "bulan": 1,
+    "kecamatan": "KUANTAN TENGAH",
+    "latitude": -0.533058,
+    "longitude": 101.57015,
+    "foto": [
+      "img/pelanggaran/TBM-2026-025.jpeg"
+    ],
+    "foto_nama": [
+      "TBM-2026-025.jpeg"
+    ]
+  },
+  {
+    "kategori": "Tertib Jalur Hijau, Taman dan Tempat Umum",
+    "tanggal": "26 Januari 2026",
+    "lokasi": "Taman Jalur, Kelurahan Pasar",
+    "laporan": "Pendataan pedagang dan penyedia jasa permainan yang berjualan/beroperasi",
+    "tindak_lanjut": "Pendataan dan pengisian Surat Pernyataan",
+    "keterangan": "Kegiatan aman dan terkendali",
+    "jenis_kegiatan": "Sosialisasi",
+    "id": "TBM-2026-030",
+    "tahun": 2026,
+    "bulan": 1,
+    "kecamatan": "KUANTAN TENGAH",
+    "latitude": -0.532428,
+    "longitude": 101.57114,
+    "foto": [
+      "img/pelanggaran/TBM-2026-030.jpeg"
+    ],
+    "foto_nama": [
+      "TBM-2026-030.jpeg"
+    ]
+  },
+  {
+    "kategori": "Tertib Jalur Hijau, Taman dan Tempat Umum",
+    "tanggal": "28 Januari 2026",
+    "lokasi": "Taman Jalur, Kelurahan Pasar",
+    "laporan": "Pendataan pedagang dan penyedia jasa permainan yang berjualan/beroperasi",
+    "tindak_lanjut": "Pendataan dan penginputan ke Google Form",
+    "keterangan": "Situasi aman dan terkendali",
+    "jenis_kegiatan": "Sosialisasi",
+    "id": "TBM-2026-033",
+    "tahun": 2026,
+    "bulan": 1,
+    "kecamatan": "KUANTAN TENGAH",
+    "latitude": -0.532428,
+    "longitude": 101.57114,
+    "foto": [
+      "img/pelanggaran/TBM-2026-033.jpeg"
+    ],
+    "foto_nama": [
+      "TBM-2026-033.jpeg"
+    ]
+  },
+  {
+    "kategori": "Tertib Jalur Hijau, Taman dan Tempat Umum",
+    "tanggal": "28 Januari 2026",
+    "lokasi": "Taman Jalur, Kelurahan Pasar",
+    "laporan": "Pendataan pedagang dan penyedia jasa permainan yang berjualan/beroperasi",
+    "tindak_lanjut": "Pendataan dan penginputan ke Google Form",
+    "keterangan": "Situasi aman dan terkendali",
+    "jenis_kegiatan": "Sosialisasi",
+    "id": "TBM-2026-034",
+    "tahun": 2026,
+    "bulan": 1,
+    "kecamatan": "KUANTAN TENGAH",
+    "latitude": -0.532428,
+    "longitude": 101.57114,
+    "foto": [
+      "img/pelanggaran/TBM-2026-034.jpeg"
+    ],
+    "foto_nama": [
+      "TBM-2026-034.jpeg"
+    ]
+  },
+  {
+    "kategori": "Tertib Jalur Hijau, Taman dan Tempat Umum",
+    "tanggal": "30 Januari 2026",
+    "lokasi": "Taman Jalur, Kelurahan Pasar",
+    "laporan": "PKL menempati area sekitar Taman Jalur/terminal lama.",
+    "tindak_lanjut": "Pemberian informasi agar tidak menempati lokasi tersebut; diarahkan ke Pasar Modern",
+    "keterangan": "Acara berlangsung tertib dan aman",
+    "jenis_kegiatan": "Patroli Siaga Trantibum",
+    "id": "TBM-2026-040",
+    "tahun": 2026,
+    "bulan": 1,
+    "kecamatan": "KUANTAN TENGAH",
+    "latitude": -0.533152,
+    "longitude": 101.571105,
+    "foto": [
+      "img/pelanggaran/TBM-2026-040.jpeg"
+    ],
+    "foto_nama": [
+      "TBM-2026-040.jpeg"
+    ]
+  },
+  {
+    "kategori": "Tertib Jalur Hijau, Taman dan Tempat Umum",
+    "tanggal": "31 Januari 2026",
+    "lokasi": "Taman Jalur, Kelurahan Pasar",
+    "laporan": "Pedagang masih berjualan di titik penimbunan Taman Jalur/terminal.",
+    "tindak_lanjut": "Penertiban dan bantuan pemindahan pedagang yang bersedia dipindahkan",
+    "keterangan": "Kegiatan berlangsung tertib dan aman; proses pekerjaan masih berlangsung",
+    "jenis_kegiatan": "Penertiban",
+    "id": "TBM-2026-042",
+    "tahun": 2026,
+    "bulan": 1,
+    "kecamatan": "KUANTAN TENGAH",
+    "latitude": -0.533152,
+    "longitude": 101.571105,
+    "foto": [
+      "img/pelanggaran/TBM-2026-042.jpeg"
+    ],
+    "foto_nama": [
+      "TBM-2026-042.jpeg"
+    ]
+  },
+  {
     "kategori": "Tertib Lingkungan",
     "tanggal": "8 Januari 2026",
     "lokasi": "Kebun Pemda Kuantan Singingi, Desa Jake",
-    "kecamatan": "KUANTAN TENGAH",
-    "kejadian": "Penertiban Penambangan Emas Tanpa Izin (PETI)",
+    "laporan": "Penertiban Penambangan Emas Tanpa Izin (PETI)",
     "tindak_lanjut": "Penghancuran, pembongkaran, dan pembakaran mesin serta rakit penambang; ±20 rakit dimusnahkan",
-    "status_keterangan": "Kegiatan berjalan aman dan terkendali",
+    "keterangan": "Kegiatan berjalan aman dan terkendali",
     "jenis_kegiatan": "Penertiban",
+    "id": "TBM-2026-006",
+    "tahun": 2026,
+    "bulan": 1,
+    "kecamatan": "KUANTAN TENGAH",
     "latitude": -0.526966,
     "longitude": 101.477772,
     "foto": [
@@ -132,132 +560,23 @@
       "img/pelanggaran/TBM-2026-006-03.jpeg"
     ],
     "foto_nama": [
-      "TBM-2026-006-01",
-      "TBM-2026-006-02",
-      "TBM-2026-006-03"
+      "TBM-2026-006-01.jpeg",
+      "TBM-2026-006-02.jpeg",
+      "TBM-2026-006-03.jpeg"
     ]
   },
   {
-    "id": "TBM-2026-007",
-    "tahun": 2026,
-    "bulan": 1,
-    "kategori": "Tertib Jalan",
-    "tanggal": "09 Januari 2026",
-    "lokasi": "Komplek Perkantoran Pemda Kuantan Singingi",
-    "kecamatan": "KUANTAN TENGAH",
-    "kejadian": "Pencegahan aktivitas balap liar pada jalur dua depan Kantor Bupati",
-    "tindak_lanjut": "Penjagaan; imbauan dan teguran edukatif/humanis kepada kelompok remaja",
-    "status_keterangan": "Pencegahan; aman dan terkendali",
-    "jenis_kegiatan": "Patroli Siaga Trantibum",
-    "latitude": -0.505988,
-    "longitude": 101.537653,
-    "foto": [
-      "img/pelanggaran/TBM-2026-007-01.jpeg",
-      "img/pelanggaran/TBM-2026-007-02.jpeg"
-    ],
-    "foto_nama": [
-      "TBM-2026-007-01",
-      "TBM-2026-007-02"
-    ]
-  },
-  {
-    "id": "TBM-2026-008",
-    "tahun": 2026,
-    "bulan": 1,
-    "kategori": "Tertib Sosial",
-    "tanggal": "09 Januari 2026",
-    "lokasi": "Taman Pemda Kuantan Singingi",
-    "kecamatan": "KUANTAN TENGAH",
-    "kejadian": "Pasangan remaja ditemukan melakukan aktivitas berduaan di lokasi",
-    "tindak_lanjut": "Teguran agar tidak melakukan perbuatan yang melanggar norma dan etika; diminta bubar",
-    "status_keterangan": "Aman dan terkendali",
-    "jenis_kegiatan": "Patroli Siaga Trantibum",
-    "latitude": -0.508634,
-    "longitude": 101.537574,
-    "foto": [
-      "img/pelanggaran/TBM-2026-008.jpeg"
-    ],
-    "foto_nama": [
-      "TBM-2026-008"
-    ]
-  },
-  {
-    "id": "TBM-2026-009",
-    "tahun": 2026,
-    "bulan": 1,
-    "kategori": "Tertib Jalur Hijau, Taman dan Tempat Umum",
-    "tanggal": "09 Januari 2026",
-    "lokasi": "Taman Pemda Kuantan Singingi",
-    "kecamatan": "KUANTAN TENGAH",
-    "kejadian": "PKL berjualan di area Taman Pemda",
-    "tindak_lanjut": "Teguran agar tidak berjualan di lokasi tersebut",
-    "status_keterangan": "Aman dan terkendali",
-    "jenis_kegiatan": "Patroli Siaga Trantibum",
-    "latitude": -0.508634,
-    "longitude": 101.537574,
-    "foto": [
-      "img/pelanggaran/TBM-2026-009.jpeg"
-    ],
-    "foto_nama": [
-      "TBM-2026-009"
-    ]
-  },
-  {
-    "id": "TBM-2026-010",
-    "tahun": 2026,
-    "bulan": 1,
-    "kategori": "Tertib Jalan",
-    "tanggal": "10 Januari 2026",
-    "lokasi": "Komplek Perkantoran Pemda Kuantan Singingi",
-    "kecamatan": "KUANTAN TENGAH",
-    "kejadian": "Pencegahan aktivitas balap liar pada ruas jalan jalur dua depan Kantor Bupati",
-    "tindak_lanjut": "Penjagaan dan imbauan/teguran edukatif kepada kelompok remaja/geng motor",
-    "status_keterangan": "Aktivitas yang berpotensi mengganggu ketertiban dipantau; aman dan terkendali",
-    "jenis_kegiatan": "Patroli Siaga Trantibum",
-    "latitude": -0.505988,
-    "longitude": 101.537653,
-    "foto": [
-      "img/pelanggaran/TBM-2026-010-01.jpeg",
-      "img/pelanggaran/TBM-2026-010-02.jpeg"
-    ],
-    "foto_nama": [
-      "TBM-2026-010-01",
-      "TBM-2026-010-02"
-    ]
-  },
-  {
-    "id": "TBM-2026-011",
-    "tahun": 2026,
-    "bulan": 1,
-    "kategori": "Tertib Jalur Hijau, Taman dan Tempat Umum",
-    "tanggal": "10 Januari 2026",
-    "lokasi": "Taman Pemda Kuantan Singingi",
-    "kecamatan": "KUANTAN TENGAH",
-    "kejadian": "PKL berjualan di area Taman Pemda yang merupakan area steril dari pedagang",
-    "tindak_lanjut": "Teguran agar tidak berjualan di lokasi tersebut",
-    "status_keterangan": "Aman dan terkendali",
-    "jenis_kegiatan": "Patroli Siaga Trantibum",
-    "latitude": -0.508634,
-    "longitude": 101.537574,
-    "foto": [
-      "img/pelanggaran/TBM-2026-011.jpeg"
-    ],
-    "foto_nama": [
-      "TBM-2026-011"
-    ]
-  },
-  {
-    "id": "TBM-2026-012",
-    "tahun": 2026,
-    "bulan": 1,
     "kategori": "Tertib Lingkungan",
     "tanggal": "11 Januari 2026",
     "lokasi": "Kebun Pemda, Desa Jake",
-    "kecamatan": "KUANTAN TENGAH",
-    "kejadian": "Pemantauan lanjutan lokasi PETI",
+    "laporan": "Pemantauan lanjutan lokasi PETI",
     "tindak_lanjut": "Pemantauan dan tindak lanjut terhadap kegiatan penertiban PETI sebelumnya",
-    "status_keterangan": "Tidak ada aktivitas penambangan; situasi aman dan terkendali",
+    "keterangan": "Tidak ada aktivitas penambangan; situasi aman dan terkendali",
     "jenis_kegiatan": "Penertiban",
+    "id": "TBM-2026-012",
+    "tahun": 2026,
+    "bulan": 1,
+    "kecamatan": "KUANTAN TENGAH",
     "latitude": -0.526966,
     "longitude": 101.477772,
     "foto": [
@@ -265,66 +584,45 @@
       "img/pelanggaran/TBM-2026-012-02.jpeg"
     ],
     "foto_nama": [
-      "TBM-2026-012-01",
-      "TBM-2026-012-02"
+      "TBM-2026-012-01.jpeg",
+      "TBM-2026-012-02.jpeg"
     ]
   },
   {
-    "id": "TBM-2026-013",
+    "kategori": "Tertib Peran Serta Masyarakat",
+    "tanggal": "06 Januari 2026",
+    "lokasi": "Ruang Hearing, Kantor DPRD Kab. Kuantan Singingi",
+    "laporan": "Hearing rencana pembongkaran/relokasi kios Pasar Bawah",
+    "tindak_lanjut": "Pembahasan relokasi; disepakati pembongkaran dilakukan 15 Januari 2026; penilaian aset melalui penilai independen",
+    "keterangan": "Hearing berlangsung tertib dan kondusif",
+    "jenis_kegiatan": "Pengamanan",
+    "id": "TBM-2026-004",
     "tahun": 2026,
     "bulan": 1,
-    "kategori": "Tertib Sosial",
-    "tanggal": "11 Januari 2026",
-    "lokasi": "Taman Pemda Kuantan Singingi",
     "kecamatan": "KUANTAN TENGAH",
-    "kejadian": "Ditemukan pasangan remaja berduaan di tempat sepi",
-    "tindak_lanjut": "Teguran humanis; diminta segera pulang",
-    "status_keterangan": "Aman dan terkendali",
-    "jenis_kegiatan": "Patroli Siaga Trantibum",
-    "latitude": -0.508634,
-    "longitude": 101.537574,
+    "latitude": -0.507661,
+    "longitude": 101.535176,
     "foto": [
-      "img/pelanggaran/TBM-2026-013.jpeg"
+      "img/pelanggaran/TBM-2026-004-01.jpeg",
+      "img/pelanggaran/TBM-2026-004-02.jpeg"
     ],
     "foto_nama": [
-      "TBM-2026-013"
+      "TBM-2026-004-01.jpeg",
+      "TBM-2026-004-02.jpeg"
     ]
   },
   {
-    "id": "TBM-2026-015",
-    "tahun": 2026,
-    "bulan": 1,
-    "kategori": "Tertib Jalan",
-    "tanggal": "12 Januari 2026",
-    "lokasi": "Komplek Perkantoran Pemda Kuantan Singingi",
-    "kecamatan": "KUANTAN TENGAH",
-    "kejadian": "Penjagaan pada beberapa ruas jalan yang kerap digunakan kelompok remaja/geng motor untuk balap liar",
-    "tindak_lanjut": "Patroli dan penjagaan sebagai pencegahan",
-    "status_keterangan": "Kondisi taman terpantau sepi; aman dan terkendali",
-    "jenis_kegiatan": "Patroli Siaga Trantibum",
-    "latitude": -0.505988,
-    "longitude": 101.537653,
-    "foto": [
-      "img/pelanggaran/TBM-2026-015-01.jpeg",
-      "img/pelanggaran/TBM-2026-015-02.jpeg"
-    ],
-    "foto_nama": [
-      "TBM-2026-015-01",
-      "TBM-2026-015-02"
-    ]
-  },
-  {
-    "id": "TBM-2026-016",
-    "tahun": 2026,
-    "bulan": 1,
     "kategori": "Tertib Peran Serta Masyarakat",
     "tanggal": "19 Januari 2026",
     "lokasi": "Kantor Bupati",
-    "kecamatan": "KUANTAN TENGAH",
-    "kejadian": "Pengamanan demonstrasi Forum Komunikasi Pemilik Kios Pasar Bawah",
+    "laporan": "Pengamanan demonstrasi Forum Komunikasi Pemilik Kios Pasar Bawah",
     "tindak_lanjut": "Pengamanan penyampaian pendapat di muka umum",
-    "status_keterangan": "Situasi aman dan terkendali",
+    "keterangan": "Situasi aman dan terkendali",
     "jenis_kegiatan": "Pengamanan",
+    "id": "TBM-2026-016",
+    "tahun": 2026,
+    "bulan": 1,
+    "kecamatan": "KUANTAN TENGAH",
     "latitude": -0.504648,
     "longitude": 101.537453,
     "foto": [
@@ -332,22 +630,22 @@
       "img/pelanggaran/TBM-2026-016-02.jpeg"
     ],
     "foto_nama": [
-      "TBM-2026-016-01",
-      "TBM-2026-016-02"
+      "TBM-2026-016-01.jpeg",
+      "TBM-2026-016-02.jpeg"
     ]
   },
   {
-    "id": "TBM-2026-017",
-    "tahun": 2026,
-    "bulan": 1,
     "kategori": "Tertib Peran Serta Masyarakat",
     "tanggal": "19 Januari 2026",
     "lokasi": "Kantor DPRD Kab. Kuantan Singingi",
-    "kecamatan": "KUANTAN TENGAH",
-    "kejadian": "Pengamanan demonstrasi Forum Komunikasi Pemilik Kios Pasar Bawah",
+    "laporan": "Pengamanan demonstrasi Forum Komunikasi Pemilik Kios Pasar Bawah",
     "tindak_lanjut": "Pengamanan penyampaian pendapat di muka umum",
-    "status_keterangan": "Situasi aman dan terkendali",
+    "keterangan": "Situasi aman dan terkendali",
     "jenis_kegiatan": "Pengamanan",
+    "id": "TBM-2026-017",
+    "tahun": 2026,
+    "bulan": 1,
+    "kecamatan": "KUANTAN TENGAH",
     "latitude": -0.507661,
     "longitude": 101.535176,
     "foto": [
@@ -355,518 +653,220 @@
       "img/pelanggaran/TBM-2026-017-02.jpeg"
     ],
     "foto_nama": [
-      "TBM-2026-017-01",
-      "TBM-2026-017-02"
+      "TBM-2026-017-01.jpeg",
+      "TBM-2026-017-02.jpeg"
     ]
   },
   {
-    "id": "TBM-2026-018",
-    "tahun": 2026,
-    "bulan": 1,
-    "kategori": "Tertib Tempat Usaha dan Usaha Tertentu",
-    "tanggal": "19 Januari 2026",
-    "lokasi": "Kawasan Pasar Bawah, Kelurahan Pasar",
-    "kecamatan": "KUANTAN TENGAH",
-    "kejadian": "Pedagang Pasar Bawah didampingi dalam peninjauan dan pemberian Surat Peringatan.",
-    "tindak_lanjut": "Pendampingan dan penyampaian Surat Peringatan",
-    "status_keterangan": "Situasi aman dan terkendali",
+    "kategori": "Tertib Sosial",
+    "tanggal": "01 Januari 2026",
+    "lokasi": "Taman Pemda Kuantan Singingi",
+    "laporan": "Ditemukan beberapa pasangan muda-mudi di tempat-tempat sepi",
+    "tindak_lanjut": "Teguran agar tidak melakukan perbuatan yang melanggar norma dan etika; pasangan diminta bubar",
+    "keterangan": "Situasi aman dan terkendali",
     "jenis_kegiatan": "Patroli Siaga Trantibum",
-    "latitude": -0.531559,
-    "longitude": 101.572027,
+    "id": "TBM-2026-001",
+    "tahun": 2026,
+    "bulan": 1,
+    "kecamatan": "KUANTAN TENGAH",
+    "latitude": -0.50883,
+    "longitude": 101.536946,
     "foto": [
-      "img/pelanggaran/TBM-2026-018.jpeg"
+      "img/pelanggaran/TBM-2026-001-01.jpeg",
+      "img/pelanggaran/TBM-2026-001-02.jpeg"
     ],
     "foto_nama": [
-      "TBM-2026-018"
+      "TBM-2026-001-01.jpeg",
+      "TBM-2026-001-02.jpeg"
     ]
   },
   {
-    "id": "TBM-2026-019",
-    "tahun": 2026,
-    "bulan": 1,
-    "kategori": "Tertib Jalan",
-    "tanggal": "19 Januari 2026",
-    "lokasi": "Komplek Perkantoran Pemda Kuantan Singingi",
-    "kecamatan": "KUANTAN TENGAH",
-    "kejadian": "Kerumunan remaja di depan Kantor Bupati dibubarkan sebagai antisipasi balap liar.",
-    "tindak_lanjut": "Pembubaran kerumunan",
-    "status_keterangan": "Aman dan terkendali",
+    "kategori": "Tertib Sosial",
+    "tanggal": "09 Januari 2026",
+    "lokasi": "Taman Pemda Kuantan Singingi",
+    "laporan": "Pasangan remaja ditemukan melakukan aktivitas berduaan di lokasi",
+    "tindak_lanjut": "Teguran agar tidak melakukan perbuatan yang melanggar norma dan etika; diminta bubar",
+    "keterangan": "Aman dan terkendali",
     "jenis_kegiatan": "Patroli Siaga Trantibum",
-    "latitude": -0.505988,
-    "longitude": 101.537653,
+    "id": "TBM-2026-008",
+    "tahun": 2026,
+    "bulan": 1,
+    "kecamatan": "KUANTAN TENGAH",
+    "latitude": -0.50883,
+    "longitude": 101.536946,
     "foto": [
-      "img/pelanggaran/TBM-2026-019.jpeg"
+      "img/pelanggaran/TBM-2026-008.jpeg"
     ],
     "foto_nama": [
-      "TBM-2026-019"
+      "TBM-2026-008.jpeg"
     ]
   },
   {
-    "id": "TBM-2026-020",
-    "tahun": 2026,
-    "bulan": 1,
-    "kategori": "Tertib Jalur Hijau, Taman dan Tempat Umum",
-    "tanggal": "19 Januari 2026",
-    "lokasi": "Lapangan Pemda, Komplek Perkantoran Pemda Kuansing",
-    "kecamatan": "KUANTAN TENGAH",
-    "kejadian": "Pengunjung membawa kendaraan bermotor ke dalam area lapangan.",
-    "tindak_lanjut": "Teguran dan edukasi agar tidak membawa kendaraan bermotor ke area lapangan",
-    "status_keterangan": "Aman dan terkendali",
+    "kategori": "Tertib Sosial",
+    "tanggal": "11 Januari 2026",
+    "lokasi": "Taman Pemda Kuantan Singingi",
+    "laporan": "Ditemukan pasangan remaja berduaan di tempat sepi",
+    "tindak_lanjut": "Teguran humanis; diminta segera pulang",
+    "keterangan": "Aman dan terkendali",
     "jenis_kegiatan": "Patroli Siaga Trantibum",
-    "latitude": -0.50706,
-    "longitude": 101.537897,
-    "foto": [
-      "img/pelanggaran/TBM-2026-020.jpeg"
-    ],
-    "foto_nama": [
-      "TBM-2026-020"
-    ]
-  },
-  {
-    "id": "TBM-2026-021",
+    "id": "TBM-2026-013",
     "tahun": 2026,
     "bulan": 1,
-    "kategori": "Tertib Bangunan",
-    "tanggal": "20 Januari 2026",
-    "lokasi": "Kawasan Pasar Bawah, Kelurahan Pasar",
     "kecamatan": "KUANTAN TENGAH",
-    "kejadian": "Pengamanan relokasi dan pembongkaran bangunan Pasar Bawah",
-    "tindak_lanjut": "Pengamanan dan pengaturan area pembongkaran, pengaturan arus lalu lintas, pengawasan hingga kegiatan selesai",
-    "status_keterangan": "Aman, tertib, dan kondusif; tidak ada penolakan masyarakat",
-    "jenis_kegiatan": "Pengamanan",
-    "latitude": -0.532112,
-    "longitude": 101.572521,
+    "latitude": -0.50883,
+    "longitude": 101.536946,
     "foto": [
-      "img/pelanggaran/TBM-2026-021-01.jpeg",
-      "img/pelanggaran/TBM-2026-021-02.jpeg"
+      "img/pelanggaran/TBM-2026-013.jpeg"
     ],
     "foto_nama": [
-      "TBM-2026-021-01",
-      "TBM-2026-021-02"
+      "TBM-2026-013.jpeg"
     ]
   },
   {
-    "id": "TBM-2026-022",
-    "tahun": 2026,
-    "bulan": 1,
-    "kategori": "Tertib Bangunan",
-    "tanggal": "21 Januari 2026",
-    "lokasi": "Kawasan Pasar Bawah, Kelurahan Pasar",
-    "kecamatan": "KUANTAN TENGAH",
-    "kejadian": "Pembongkaran/relokasi lanjutan Kios Pasar Bawah",
-    "tindak_lanjut": "Penempatan personel, pendampingan pedagang, pengamanan area/barang, koordinasi lintas instansi",
-    "status_keterangan": "Pedagang kooperatif; tidak terdapat penolakan/protes/tindakan anarkis; kegiatan kondusif, aman dan lancar",
-    "jenis_kegiatan": "Pengamanan",
-    "latitude": -0.532112,
-    "longitude": 101.572521,
-    "foto": [
-      "img/pelanggaran/TBM-2026-022-01.jpeg",
-      "img/pelanggaran/TBM-2026-022-02.jpeg"
-    ],
-    "foto_nama": [
-      "TBM-2026-022-01",
-      "TBM-2026-022-02"
-    ]
-  },
-  {
-    "id": "TBM-2026-023",
-    "tahun": 2026,
-    "bulan": 1,
-    "kategori": "Tertib Jalur Hijau, Taman dan Tempat Umum",
-    "tanggal": "22 Januari 2026",
-    "lokasi": "Taman Jalur, Kelurahan Pasar",
-    "kecamatan": "KUANTAN TENGAH",
-    "kejadian": "PKL berjualan di seputaran Taman Jalur dan Ex PT Ludin",
-    "tindak_lanjut": "Peninjauan, pemberian Surat Peringatan, imbauan untuk tidak berjualan mulai 22 Januari dan arahan ke Pasar Rakyat/modern",
-    "status_keterangan": "Situasi aman dan terkendali",
-    "jenis_kegiatan": "Sosialisasi",
-    "latitude": -0.532428,
-    "longitude": 101.57114,
-    "foto": [
-      "img/pelanggaran/TBM-2026-023.jpeg"
-    ],
-    "foto_nama": [
-      "TBM-2026-023"
-    ]
-  },
-  {
-    "id": "TBM-2026-024",
-    "tahun": 2026,
-    "bulan": 1,
-    "kategori": "Tertib Jalur Hijau, Taman dan Tempat Umum",
-    "tanggal": "23 Januari 2026",
-    "lokasi": "Taman Jalur, Kelurahan Pasar",
-    "kecamatan": "KUANTAN TENGAH",
-    "kejadian": "PKL berjualan di sekitar area Taman Jalur",
-    "tindak_lanjut": "Penertiban; sesuai instruksi pimpinan pedagang diberi izin berjualan selama 2 minggu",
-    "status_keterangan": "Situasi aman dan terkendali",
-    "jenis_kegiatan": "Penertiban",
-    "latitude": -0.532428,
-    "longitude": 101.57114,
-    "foto": [
-      "img/pelanggaran/TBM-2026-024.jpeg"
-    ],
-    "foto_nama": [
-      "TBM-2026-024"
-    ]
-  },
-  {
-    "id": "TBM-2026-025",
-    "tahun": 2026,
-    "bulan": 1,
-    "kategori": "Tertib Jalur Hijau, Taman dan Tempat Umum",
-    "tanggal": "24 Januari 2026",
-    "lokasi": "Area eks-kantor dinas tenaga kerja",
-    "kecamatan": "KUANTAN TENGAH",
-    "kejadian": "Fasilitas umum digunakan sebagai tempat parkir 3 gerobak PKL setelah berjualan",
-    "tindak_lanjut": "Koordinasi dengan koordinator pedagang agar pemilik gerobak memindahkan gerobak dari area tersebut",
-    "status_keterangan": "Situasi sekitar Taman Jalur terpantau ramai",
-    "jenis_kegiatan": "Patroli Siaga Trantibum",
-    "latitude": -0.532428,
-    "longitude": 101.57114,
-    "foto": [
-      "img/pelanggaran/TBM-2026-025.jpeg"
-    ],
-    "foto_nama": [
-      "TBM-2026-025"
-    ]
-  },
-  {
-    "id": "TBM-2026-026",
-    "tahun": 2026,
-    "bulan": 1,
-    "kategori": "Tertib Jalan",
-    "tanggal": "24 Januari 2026",
-    "lokasi": "Komplek Perkantoran Pemda Kuantan Singingi (Bundaran Air Mancur)",
-    "kecamatan": "KUANTAN TENGAH",
-    "kejadian": "Remaja menggunakan kendaraan secara ugal-ugalan; kerumunan remaja dibubarkan",
-    "tindak_lanjut": "Penghalauan dan pembubaran kerumunan",
-    "status_keterangan": "Aman dan terkendali",
-    "jenis_kegiatan": "Patroli Siaga Trantibum",
-    "latitude": -0.509476,
-    "longitude": 101.536477,
-    "foto": [
-      "img/pelanggaran/TBM-2026-026-01.jpeg",
-      "img/pelanggaran/TBM-2026-026-02.jpeg"
-    ],
-    "foto_nama": [
-      "TBM-2026-026-01",
-      "TBM-2026-026-02"
-    ]
-  },
-  {
-    "id": "TBM-2026-027",
-    "tahun": 2026,
-    "bulan": 1,
     "kategori": "Tertib Sosial",
     "tanggal": "24 Januari 2026",
     "lokasi": "Komplek Perkantoran Pemda Kuantan Singingi",
-    "kecamatan": "KUANTAN TENGAH",
-    "kejadian": "Ditemukan sejenis minuman keras pada kerumunan remaja",
+    "laporan": "Ditemukan sejenis minuman keras pada kerumunan remaja",
     "tindak_lanjut": "Minuman keras dimusnahkan",
-    "status_keterangan": "Aman dan terkendali",
+    "keterangan": "Aman dan terkendali",
     "jenis_kegiatan": "Patroli Siaga Trantibum",
-    "latitude": -0.505988,
-    "longitude": 101.537653,
+    "id": "TBM-2026-027",
+    "tahun": 2026,
+    "bulan": 1,
+    "kecamatan": "KUANTAN TENGAH",
+    "latitude": -0.506009,
+    "longitude": 101.53496,
     "foto": [
       "img/pelanggaran/TBM-2026-027.jpeg"
     ],
     "foto_nama": [
-      "TBM-2026-027"
+      "TBM-2026-027.jpeg"
     ]
   },
   {
-    "id": "TBM-2026-028",
-    "tahun": 2026,
-    "bulan": 1,
-    "kategori": "Tertib Jalan",
-    "tanggal": "25 Januari 2026",
-    "lokasi": "Komplek Perkantoran Pemda Kuantan Singingi",
-    "kecamatan": "KUANTAN TENGAH",
-    "kejadian": "Penjagaan pada beberapa ruas jalan untuk mencegah aksi balap liar",
-    "tindak_lanjut": "Penjagaan dan imbauan kepada kelompok remaja",
-    "status_keterangan": "Taman cukup ramai dan steril dari aktivitas pedagang; aman dan terkendali",
-    "jenis_kegiatan": "Patroli Siaga Trantibum",
-    "latitude": -0.508634,
-    "longitude": 101.537574,
-    "foto": [
-      "img/pelanggaran/TBM-2026-028.jpeg"
-    ],
-    "foto_nama": [
-      "TBM-2026-028"
-    ]
-  },
-  {
-    "id": "TBM-2026-029",
-    "tahun": 2026,
-    "bulan": 1,
     "kategori": "Tertib Sosial",
     "tanggal": "25 Januari 2026",
     "lokasi": "Taman Pemda Kuantan Singingi",
-    "kecamatan": "KUANTAN TENGAH",
-    "kejadian": "Anak-anak muda masih beraktivitas di ruang terbuka hingga larut malam dan berkumpul tanpa memperhatikan batas waktu",
+    "laporan": "Anak-anak muda masih beraktivitas di ruang terbuka hingga larut malam dan berkumpul tanpa memperhatikan batas waktu",
     "tindak_lanjut": "Pengawasan dan penertiban aktivitas di ruang terbuka",
-    "status_keterangan": "Aman dan terkendali",
+    "keterangan": "Aman dan terkendali",
     "jenis_kegiatan": "Patroli Siaga Trantibum",
-    "latitude": -0.508634,
-    "longitude": 101.537574,
+    "id": "TBM-2026-029",
+    "tahun": 2026,
+    "bulan": 1,
+    "kecamatan": "KUANTAN TENGAH",
+    "latitude": -0.50883,
+    "longitude": 101.536946,
     "foto": [
       "img/pelanggaran/TBM-2026-029.jpeg"
     ],
     "foto_nama": [
-      "TBM-2026-029"
+      "TBM-2026-029.jpeg"
     ]
   },
   {
-    "id": "TBM-2026-030",
-    "tahun": 2026,
-    "bulan": 1,
-    "kategori": "Tertib Jalur Hijau, Taman dan Tempat Umum",
-    "tanggal": "26 Januari 2026",
-    "lokasi": "Taman Jalur, Kelurahan Pasar",
-    "kecamatan": "KUANTAN TENGAH",
-    "kejadian": "Pendataan pedagang dan penyedia jasa permainan yang berjualan/beroperasi",
-    "tindak_lanjut": "Pendataan dan pengisian Surat Pernyataan",
-    "status_keterangan": "Kegiatan aman dan terkendali",
-    "jenis_kegiatan": "Sosialisasi",
-    "latitude": -0.532428,
-    "longitude": 101.57114,
-    "foto": [
-      "img/pelanggaran/TBM-2026-030.jpeg"
-    ],
-    "foto_nama": [
-      "TBM-2026-030"
-    ]
-  },
-  {
-    "id": "TBM-2026-031",
-    "tahun": 2026,
-    "bulan": 1,
-    "kategori": "Tertib Jalan",
-    "tanggal": "27 Januari 2026",
-    "lokasi": "Taman Pemda Kuantan Singingi",
-    "kecamatan": "KUANTAN TENGAH",
-    "kejadian": "Penjagaan beberapa ruas jalan untuk mencegah aksi balap liar.",
-    "tindak_lanjut": "Penjagaan; pencegahan",
-    "status_keterangan": "Aman dan terkendali",
-    "jenis_kegiatan": "Patroli Siaga Trantibum",
-    "latitude": -0.508634,
-    "longitude": 101.537574,
-    "foto": [
-      "img/pelanggaran/TBM-2026-031.jpeg"
-    ],
-    "foto_nama": [
-      "TBM-2026-031"
-    ]
-  },
-  {
-    "id": "TBM-2026-032",
-    "tahun": 2026,
-    "bulan": 1,
     "kategori": "Tertib Sosial",
     "tanggal": "27 Januari 2026",
     "lokasi": "Taman Pemda Kuantan Singingi",
-    "kecamatan": "KUANTAN TENGAH",
-    "kejadian": "Ditemukan beberapa pasangan muda-mudi berduaan di tempat sepi.",
+    "laporan": "Ditemukan beberapa pasangan muda-mudi berduaan di tempat sepi.",
     "tindak_lanjut": "Teguran humanis dan edukatif; diminta bubar",
-    "status_keterangan": "Aman dan terkendali",
+    "keterangan": "Aman dan terkendali",
     "jenis_kegiatan": "Patroli Siaga Trantibum",
-    "latitude": -0.508634,
-    "longitude": 101.537574,
+    "id": "TBM-2026-032",
+    "tahun": 2026,
+    "bulan": 1,
+    "kecamatan": "KUANTAN TENGAH",
+    "latitude": -0.50883,
+    "longitude": 101.536946,
     "foto": [
       "img/pelanggaran/TBM-2026-032.jpeg"
     ],
     "foto_nama": [
-      "TBM-2026-032"
+      "TBM-2026-032.jpeg"
     ]
   },
   {
-    "id": "TBM-2026-033",
-    "tahun": 2026,
-    "bulan": 1,
-    "kategori": "Tertib Jalur Hijau, Taman dan Tempat Umum",
-    "tanggal": "28 Januari 2026",
-    "lokasi": "Taman Jalur, Kelurahan Pasar",
-    "kecamatan": "KUANTAN TENGAH",
-    "kejadian": "Pendataan pedagang dan penyedia jasa permainan yang berjualan/beroperasi",
-    "tindak_lanjut": "Pendataan dan penginputan ke Google Form",
-    "status_keterangan": "Situasi aman dan terkendali",
-    "jenis_kegiatan": "Sosialisasi",
-    "latitude": -0.532428,
-    "longitude": 101.57114,
-    "foto": [
-      "img/pelanggaran/TBM-2026-033.jpeg"
-    ],
-    "foto_nama": [
-      "TBM-2026-033"
-    ]
-  },
-  {
-    "id": "TBM-2026-034",
-    "tahun": 2026,
-    "bulan": 1,
-    "kategori": "Tertib Jalur Hijau, Taman dan Tempat Umum",
-    "tanggal": "28 Januari 2026",
-    "lokasi": "Taman Jalur, Kelurahan Pasar",
-    "kecamatan": "KUANTAN TENGAH",
-    "kejadian": "Pendataan pedagang dan penyedia jasa permainan yang berjualan/beroperasi",
-    "tindak_lanjut": "Pendataan dan penginputan ke Google Form",
-    "status_keterangan": "Situasi aman dan terkendali",
-    "jenis_kegiatan": "Sosialisasi",
-    "latitude": -0.532428,
-    "longitude": 101.57114,
-    "foto": [
-      "img/pelanggaran/TBM-2026-034.jpeg"
-    ],
-    "foto_nama": [
-      "TBM-2026-034"
-    ]
-  },
-  {
-    "id": "TBM-2026-036",
-    "tahun": 2026,
-    "bulan": 1,
     "kategori": "Tertib Sosial",
     "tanggal": "28 Januari 2026",
     "lokasi": "Taman Pemda Kuantan Singingi",
-    "kecamatan": "KUANTAN TENGAH",
-    "kejadian": "Ditemukan pasangan muda-mudi berduaan di tempat sepi.",
+    "laporan": "Ditemukan pasangan muda-mudi berduaan di tempat sepi.",
     "tindak_lanjut": "Teguran humanis dan edukatif; diminta segera bubar",
-    "status_keterangan": "Situasi taman sepi; aman dan terkendali",
+    "keterangan": "Situasi taman sepi; aman dan terkendali",
     "jenis_kegiatan": "Patroli Siaga Trantibum",
-    "latitude": -0.508634,
-    "longitude": 101.537574,
+    "id": "TBM-2026-036",
+    "tahun": 2026,
+    "bulan": 1,
+    "kecamatan": "KUANTAN TENGAH",
+    "latitude": -0.50883,
+    "longitude": 101.536946,
     "foto": [
       "img/pelanggaran/TBM-2026-036.jpeg"
     ],
     "foto_nama": [
-      "TBM-2026-036"
+      "TBM-2026-036.jpeg"
     ]
   },
   {
-    "id": "TBM-2026-037",
-    "tahun": 2026,
-    "bulan": 1,
     "kategori": "Tertib Sosial",
     "tanggal": "29 Januari 2026",
     "lokasi": "Sekitaran Komplek Perkantoran Pemda Kuansing",
-    "kecamatan": "KUANTAN TENGAH",
-    "kejadian": "Ditemukan sepasang remaja berduaan di tempat sunyi dan gelap.",
+    "laporan": "Ditemukan sepasang remaja berduaan di tempat sunyi dan gelap.",
     "tindak_lanjut": "Edukasi, teguran dan diminta pulang ke rumah masing-masing",
-    "status_keterangan": "Kondusif dan aman",
+    "keterangan": "Kondusif dan aman",
     "jenis_kegiatan": "Patroli Siaga Trantibum",
-    "latitude": -0.506238,
-    "longitude": 101.534984,
+    "id": "TBM-2026-037",
+    "tahun": 2026,
+    "bulan": 1,
+    "kecamatan": "KUANTAN TENGAH",
+    "latitude": -0.506009,
+    "longitude": 101.53496,
     "foto": [
       "img/pelanggaran/TBM-2026-037.jpeg"
     ],
     "foto_nama": [
-      "TBM-2026-037"
+      "TBM-2026-037.jpeg"
     ]
   },
   {
-    "id": "TBM-2026-038",
-    "tahun": 2026,
-    "bulan": 1,
-    "kategori": "Tertib Jalan",
-    "tanggal": "29 Januari 2026",
-    "lokasi": "Komplek Perkantoran Pemda Kuansing (Bundaran Air mancur)",
-    "kecamatan": "KUANTAN TENGAH",
-    "kejadian": "Penjagaan di sekitar Bundaran Air Mancur untuk mengantisipasi kerumunan dan aksi balap liar.",
-    "tindak_lanjut": "Patroli dan penjagaan pencegahan",
-    "status_keterangan": "Situasi kondusif dan aman",
-    "jenis_kegiatan": "Patroli Siaga Trantibum",
-    "latitude": -0.509476,
-    "longitude": 101.536477,
-    "foto": [
-      "img/pelanggaran/TBM-2026-038.jpeg"
-    ],
-    "foto_nama": [
-      "TBM-2026-038"
-    ]
-  },
-  {
-    "id": "TBM-2026-039",
-    "tahun": 2026,
-    "bulan": 1,
     "kategori": "Tertib Sosial",
     "tanggal": "30 Januari 2026",
     "lokasi": "Jalan Proklamasi (Lampu Merah Sungai Jering)",
-    "kecamatan": "KUANTAN TENGAH",
-    "kejadian": "Dua orang badut meminta-minta di lampu merah.",
+    "laporan": "Dua orang badut meminta-minta di lampu merah.",
     "tindak_lanjut": "Teguran lisan agar tidak meminta-minta di lampu merah",
-    "status_keterangan": "Acara berlangsung tertib dan aman",
+    "keterangan": "Acara berlangsung tertib dan aman",
     "jenis_kegiatan": "Patroli Siaga Trantibum",
+    "id": "TBM-2026-039",
+    "tahun": 2026,
+    "bulan": 1,
+    "kecamatan": "KUANTAN TENGAH",
     "latitude": -0.521534,
     "longitude": 101.542876,
     "foto": [
       "img/pelanggaran/TBM-2026-039.jpeg"
     ],
     "foto_nama": [
-      "TBM-2026-039"
+      "TBM-2026-039.jpeg"
     ]
   },
   {
-    "id": "TBM-2026-040",
-    "tahun": 2026,
-    "bulan": 1,
-    "kategori": "Tertib Jalur Hijau, Taman dan Tempat Umum",
-    "tanggal": "30 Januari 2026",
-    "lokasi": "Taman Jalur, Kelurahan Pasar",
-    "kecamatan": "KUANTAN TENGAH",
-    "kejadian": "PKL menempati area sekitar Taman Jalur/terminal lama.",
-    "tindak_lanjut": "Pemberian informasi agar tidak menempati lokasi tersebut; diarahkan ke Pasar Modern",
-    "status_keterangan": "Acara berlangsung tertib dan aman",
+    "kategori": "Tertib Tempat Usaha dan Usaha Tertentu",
+    "tanggal": "19 Januari 2026",
+    "lokasi": "Kawasan Pasar Bawah, Kelurahan Pasar",
+    "laporan": "Pedagang Pasar Bawah didampingi dalam peninjauan dan pemberian Surat Peringatan.",
+    "tindak_lanjut": "Pendampingan dan penyampaian Surat Peringatan",
+    "keterangan": "Situasi aman dan terkendali",
     "jenis_kegiatan": "Patroli Siaga Trantibum",
-    "latitude": -0.532428,
-    "longitude": 101.57114,
-    "foto": [
-      "img/pelanggaran/TBM-2026-040.jpeg"
-    ],
-    "foto_nama": [
-      "TBM-2026-040"
-    ]
-  },
-  {
-    "id": "TBM-2026-041",
+    "id": "TBM-2026-018",
     "tahun": 2026,
     "bulan": 1,
-    "kategori": "Tertib Jalan",
-    "tanggal": "31 Januari 2026",
-    "lokasi": "Ruas jalan antara Taman Jalur dan Ex PT Ludin",
     "kecamatan": "KUANTAN TENGAH",
-    "kejadian": "Pengamanan lalu lintas pada ruas jalan saat pekerjaan penimbunan tanah oleh PUPR berlangsung.",
-    "tindak_lanjut": "Pengamanan dan pengaturan lalu lintas",
-    "status_keterangan": "Lalu lintas ramai lancar; kegiatan aman dan terkendali",
-    "jenis_kegiatan": "Pengamanan",
-    "latitude": -0.532013,
-    "longitude": 101.571316,
+    "latitude": -0.531559,
+    "longitude": 101.572027,
     "foto": [
-      "img/pelanggaran/TBM-2026-041.jpeg"
+      "img/pelanggaran/TBM-2026-018.jpeg"
     ],
     "foto_nama": [
-      "TBM-2026-041"
-    ]
-  },
-  {
-    "id": "TBM-2026-042",
-    "tahun": 2026,
-    "bulan": 1,
-    "kategori": "Tertib Jalur Hijau, Taman dan Tempat Umum",
-    "tanggal": "31 Januari 2026",
-    "lokasi": "Taman Jalur, Kelurahan Pasar",
-    "kecamatan": "KUANTAN TENGAH",
-    "kejadian": "Pedagang masih berjualan di titik penimbunan Taman Jalur/terminal.",
-    "tindak_lanjut": "Penertiban dan bantuan pemindahan pedagang yang bersedia dipindahkan",
-    "status_keterangan": "Kegiatan berlangsung tertib dan aman; proses pekerjaan masih berlangsung",
-    "jenis_kegiatan": "Penertiban",
-    "latitude": -0.532428,
-    "longitude": 101.57114,
-    "foto": [
-      "img/pelanggaran/TBM-2026-042.jpeg"
-    ],
-    "foto_nama": [
-      "TBM-2026-042"
+      "TBM-2026-018.jpeg"
     ]
   }
 ]
