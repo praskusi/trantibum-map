@@ -5835,29 +5835,8 @@
     }
 
     /* =========================================================
-       WARNA DEFAULT KECAMATAN
-       Dipakai hanya saat belum ada dataset aktif.
-       Saat dataset aktif, warna default dihilangkan dan
-       kecamatan aktif diberi blok sorotan.
+       KECAMATAN STYLE
     ========================================================== */
-
-    const KECAMATAN_COLORS = {
-      "BENAI": "#6BAED6",
-      "CERENTI": "#F4A261",
-      "GUNUNG TOAR": "#70AD47",
-      "HULU KUANTAN": "#9B7EBD",
-      "INUMAN": "#E76F51",
-      "KUANTAN HILIR": "#2A9D8F",
-      "KUANTAN HILIR SEBERANG": "#F28482",
-      "KUANTAN TENGAH": "#5DADE2",
-      "KUANTAN MUDIK": "#E9C46A",
-      "LOGAS TANAH DARAT": "#8AB17D",
-      "PANGEAN": "#C06C84",
-      "PUCUK RANTAU": "#F6BD60",
-      "SENTAJO RAYA": "#4D908E",
-      "SINGINGI": "#577590",
-      "SINGINGI HILIR": "#7F9C6E"
-    };
 
     function styleKecamatan(
       feature,
@@ -5869,74 +5848,209 @@
           feature
         );
 
-      const normalizedName =
-        String(name || "")
-          .trim()
-          .toUpperCase();
-
-      const datasetIsActive =
-        !!activeDataset;
-
-      const isSpecificSelection =
-        selectedName &&
-        selectedName !== "all";
-
       const isSelected =
-        datasetIsActive &&
-        (
-          !isSpecificSelection ||
-          normalizedName ===
-            String(selectedName).trim().toUpperCase()
-        );
+        selectedName &&
+        selectedName !== "all" &&
+        name.toLowerCase() ===
+        String(selectedName).toLowerCase();
 
-      /* -------------------------------------------------------
-         MODE 1 — BELUM ADA DATASET AKTIF
-         Semua kecamatan tampil warna-warni.
-         Garis batas tetap seragam seperti sebelumnya.
-      -------------------------------------------------------- */
-      if (!datasetIsActive) {
+      /*
+        MODE DATASET AKTIF
+
+        - Kecamatan tertentu: hanya wilayah yang dipilih
+          yang dirender oleh renderKecamatan().
+        - Semua Kecamatan: seluruh kecamatan diberi gaya
+          highlight yang sama seperti tampilan dataset aktif.
+      */
+      if (activeDataset) {
+
+        if (
+          isSelected ||
+          selectedName === "all"
+        ) {
+
+          return {
+            color: "#A4752C",
+            weight: 2,
+            opacity: 1,
+            fillColor: "#A4752C",
+            fillOpacity: 0.10,
+            dashArray: "6 5"
+          };
+
+        }
 
         return {
           color: "#555D3B",
           weight: 1.4,
-          opacity: 0.95,
-          fillColor:
-            KECAMATAN_COLORS[normalizedName] ||
-            "#B7C9A6",
-          fillOpacity: 0.28,
-          dashArray: null
+          opacity: 0.90,
+          fillColor: "#555D3B",
+          fillOpacity: 0.035,
+          dashArray: "5 5"
         };
 
       }
 
-      /* -------------------------------------------------------
-         MODE 2 — DATASET AKTIF
-         Kecamatan aktif diberi blok sorotan.
-         Saat "Semua Kecamatan" dipilih, seluruh kecamatan
-         otomatis diberi blok sorotan.
-      -------------------------------------------------------- */
-      if (isSelected) {
-
-        return {
-          color: "#A4752C",
-          weight: 2,
-          opacity: 1,
-          fillColor: "#A4752C",
-          fillOpacity: 0.10,
-          dashArray: "6 5"
-        };
-
-      }
-
-      /* Kecamatan lain tetap punya batas, tetapi tanpa warna. */
+      /*
+        MODE AWAL / TANPA DATASET
+        Setiap kecamatan mendapat warna berbeda, tetapi
+        garis batas tetap menggunakan pola batas yang sama.
+      */
       return {
-        color: "#777B6A",
-        weight: 1.1,
-        opacity: 0.72,
-        fillColor: "#FFFFFF",
-        fillOpacity: 0,
+        color: "#555D3B",
+        weight: 1.4,
+        opacity: 0.90,
+        fillColor: getKecamatanDefaultColor(name),
+        fillOpacity: 0.38,
         dashArray: "5 5"
       };
+
+    }
+
+    /* =========================================================
+       RENDER KECAMATAN
+    ========================================================== */
+
+    function renderKecamatan(
+      selectedName = "all",
+      fitToSelected = false
+    ) {
+
+      kecamatanLayer.clearLayers();
+
+      if (
+        !kecamatanGeoJson
+      ) {
+        return;
+      }
+
+      const features =
+        kecamatanGeoJson.features
+          .filter(feature => {
+
+            if (
+              !selectedName ||
+              selectedName === "all"
+            ) {
+              return true;
+            }
+
+            const name =
+              getKecamatanFromFeature(
+                feature
+              );
+
+            return (
+              name.toLowerCase() ===
+              String(selectedName).toLowerCase()
+            );
+
+          });
+
+      if (!features.length) {
+
+        L.geoJSON(
+          kecamatanGeoJson,
+          {
+            style:
+              feature =>
+                styleKecamatan(
+                  feature,
+                  selectedName
+                )
+          }
+        ).addTo(
+          kecamatanLayer
+        );
+
+        return;
+
+      }
+
+      const selectedGeoJson = {
+        type: "FeatureCollection",
+        features
+      };
+
+      const layer =
+        L.geoJSON(
+          selectedGeoJson,
+          {
+            style:
+              feature =>
+                styleKecamatan(
+                  feature,
+                  selectedName
+                ),
+
+            onEachFeature:
+              (feature, leafletLayer) => {
+
+                const name =
+                  getKecamatanFromFeature(
+                    feature
+                  ) ||
+                  "KECAMATAN";
+
+                leafletLayer.bindTooltip(
+                  String(name),
+                  {
+                    sticky: true,
+                    direction: "center",
+                    className:
+                      "kecamatan-tooltip"
+                  }
+                );
+
+              }
+
+          }
+        );
+
+      layer.addTo(
+        kecamatanLayer
+      );
+
+      if (
+        fitToSelected &&
+        selectedName !== "all"
+      ) {
+
+        try {
+
+          map.fitBounds(
+            layer.getBounds(),
+            {
+              padding: [25, 25],
+              maxZoom: 14
+            }
+          );
+
+        } catch (error) {
+          console.warn(
+            "Gagal fokus kecamatan:",
+            error
+          );
+        }
+
+      } else if (
+        selectedName === "all"
+      ) {
+
+        if (
+          layer.getBounds().isValid()
+        ) {
+
+          map.fitBounds(
+            layer.getBounds(),
+            {
+              padding: [20, 20]
+            }
+          );
+
+        }
+
+      }
 
     }
 
@@ -6151,6 +6265,44 @@
       "SINGINGIHILIR": "SINGINGI HILIR"
 
     };
+
+    /* =========================================================
+       WARNA KECAMATAN - MODE AWAL TANPA DATASET
+       Setiap kecamatan mendapat warna tetap agar mudah dibedakan.
+       Warna hanya dipakai saat belum ada dataset aktif.
+    ========================================================== */
+
+    const KECAMATAN_COLORS = {
+
+      "BENAI": "#F6C1C0",
+      "CERENTI": "#B8D8F8",
+      "GUNUNG TOAR": "#C9E7B8",
+      "HULU KUANTAN": "#F5D6A6",
+      "INUMAN": "#D4C5F9",
+      "KUANTAN HILIR": "#F8E89A",
+      "KUANTAN HILIR SEBERANG": "#BFE7E4",
+      "KUANTAN TENGAH": "#F3B7CE",
+      "KUANTAN MUDIK": "#C8D9A4",
+      "LOGAS TANAH DARAT": "#F2C6A8",
+      "PANGEAN": "#B9D4F5",
+      "PUCUK RANTAU": "#D8C0F0",
+      "SENTAJO RAYA": "#C5E0B4",
+      "SINGINGI": "#FFD2A6",
+      "SINGINGI HILIR": "#C2D3EB"
+
+    };
+
+    function getKecamatanDefaultColor(name) {
+
+      const formattedName =
+        formatKecamatanName(name);
+
+      return (
+        KECAMATAN_COLORS[formattedName] ||
+        "#D9D5C8"
+      );
+
+    }
 
     function normalizeKecamatanKey(name) {
 
@@ -10133,6 +10285,10 @@
 
         populateKecamatanSelect();
 
+        /*
+          Saat pertama kali dibuka belum ada dataset aktif,
+          sehingga seluruh kecamatan tampil warna-warni.
+        */
         renderKecamatan(
           "all",
           false
